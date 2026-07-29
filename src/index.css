@@ -15,7 +15,7 @@
 
 @layer components {
   .icici-gradient {
-    background: linear-gradient(135deg, #B02A30 0%, #8B1A1F 50%, #005B75 100%);
+    background: linear-gradient(135deg, #003D50 0%, #005B75 50%, #8B1A1F 100%);
   }
   .icici-gradient-light {
     background: linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 100%);
