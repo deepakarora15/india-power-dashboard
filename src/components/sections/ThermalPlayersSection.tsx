@@ -193,7 +193,7 @@ export function ThermalPlayersSection() {
 
         {/* Companies list */}
         <div className="space-y-2.5">
-          {filteredCompanies.map(company => {
+          {filteredCompanies.map((company, idx) => {
             const isExpanded = expanded === company.rank;
             const coalPct = company.totalThermalMW > 0 ? (company.coalMW / company.totalThermalMW) * 100 : 0;
             const gasPct = company.totalThermalMW > 0 ? (company.gasMW / company.totalThermalMW) * 100 : 0;
@@ -210,7 +210,7 @@ export function ThermalPlayersSection() {
                 <div className="flex items-center gap-3">
                   {/* Rank */}
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black text-xs flex-shrink-0" style={{ backgroundColor: getOwnershipColor(company.ownership) }}>
-                    #{company.rank}
+                    #{idx + 1}
                   </div>
 
                   {/* Company info */}

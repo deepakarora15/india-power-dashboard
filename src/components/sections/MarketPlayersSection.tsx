@@ -151,7 +151,7 @@ export function MarketPlayersSection() {
 
         {/* Company Cards */}
         <div className="space-y-3">
-          {filteredCompanies.map((company) => {
+          {filteredCompanies.map((company, idx) => {
             const isSelected = selectedCompany?.rank === company.rank;
             const marketShare = ((company.totalRECapacityMW / data.nationalRESummary.totalRECapacityMW) * 100).toFixed(1);
 
@@ -166,7 +166,7 @@ export function MarketPlayersSection() {
                   <div className="flex items-center gap-3">
                     {/* Rank */}
                     <div className="w-7 h-7 rounded-full bg-icici-navy flex items-center justify-center text-white font-black text-[14px] flex-shrink-0">
-                      {company.rank}
+                      {idx + 1}
                     </div>
 
                     {/* Name + Tags */}
