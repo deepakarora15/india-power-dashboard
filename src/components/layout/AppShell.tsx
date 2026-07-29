@@ -107,6 +107,10 @@ export function AppShell({ children }: AppShellProps) {
 
       {/* Main Content */}
       <main className="flex-1 max-w-[1920px] mx-auto w-full px-6 py-6 pb-16">
+        {/* Disclaimer Banner */}
+        <div className="mb-4 px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg text-center">
+          <p className="text-[12px] text-amber-800 font-semibold">⚠️ ICICI Lombard Internal Use Only — Confidential — Not for external circulation or distribution</p>
+        </div>
         {children}
       </main>
 
