@@ -80,6 +80,19 @@
     },
     {
       "rank": 5,
+      "name": "NHPC Ltd (Hydroelectric)",
+      "totalRECapacityMW": 7200,
+      "solarMW": 1200,
+      "windMW": 0,
+      "hydroMW": 6000,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "source": "NHPC Annual Report FY26; CEA hydro register; NPP data",
+      "notes": "Indias largest hydro company. 6,000 MW hydro across 24 projects. Salal (690 MW), Uri-I (480 MW), Dulhasti (390 MW), Chamera-I (540 MW), Dhauliganga (280 MW). Building Subansiri Lower (2,000 MW)."
+    },
+    {
+      "rank": 6,
       "name": "Tata Power Renewable Energy",
       "totalRECapacityMW": 6700,
       "solarMW": 4200,
@@ -92,7 +105,7 @@
       "notes": "RE arm of Tata Power. Strong rooftop solar presence."
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "JSW Energy Ltd (RE Portfolio)",
       "totalRECapacityMW": 5800,
       "solarMW": 3000,
@@ -105,7 +118,7 @@
       "notes": "RE capacity within JSW Energy's total 13.2 GW portfolio. Rapid expansion underway."
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "NTPC Green Energy Ltd",
       "totalRECapacityMW": 5500,
       "solarMW": 4500,
@@ -118,7 +131,7 @@
       "notes": "NTPC's renewable energy subsidiary. Targeting 60 GW RE by 2032."
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Adani Wind Energy (consolidated)",
       "totalRECapacityMW": 5500,
       "solarMW": 0,
@@ -131,7 +144,7 @@
       "notes": "Wind-specific capacity within AGEL. Assets in Gujarat (Kutch, Mundra), Rajasthan (Jaisalmer), Karnataka."
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "ReNew Wind Energy",
       "totalRECapacityMW": 5500,
       "solarMW": 0,
@@ -144,7 +157,7 @@
       "notes": "Wind-specific arm of ReNew. Assets in Maharashtra, Karnataka, Gujarat, Rajasthan. Mix of older and new turbines."
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "Acme Solar Holdings Ltd",
       "totalRECapacityMW": 5100,
       "solarMW": 5100,
@@ -157,7 +170,7 @@
       "notes": "Pure-play solar developer. Projects across Rajasthan, Telangana, Andhra Pradesh."
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "ACME Solar Holdings",
       "totalRECapacityMW": 5100,
       "solarMW": 5100,
@@ -170,7 +183,7 @@
       "notes": "Pure-play solar developer. 5.1 GW operational. Also developing India's first green ammonia project in Oman."
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Sembcorp Energy India",
       "totalRECapacityMW": 4900,
       "solarMW": 2800,
@@ -183,7 +196,7 @@
       "notes": "Singapore-listed Sembcorp's India RE arm. Also has 2.6 GW thermal."
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "SB Energy (SoftBank / Adani JV)",
       "totalRECapacityMW": 4900,
       "solarMW": 4900,
@@ -196,7 +209,33 @@
       "notes": "Originally SoftBank-Bharti JV. Acquired by Adani Green in 2021 for $3.5 bn. Large utility-scale solar."
     },
     {
-      "rank": 14,
+      "rank": 15,
+      "name": "SJVN Ltd (Hydro + RE)",
+      "totalRECapacityMW": 4100,
+      "solarMW": 1500,
+      "windMW": 500,
+      "hydroMW": 2100,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "source": "SJVN Annual Report FY26; CEA hydro data; NPP records",
+      "notes": "Nathpa Jhakri (1,500 MW HP — one of Indias largest), Rampur (412 MW HP). Building Luhri (210 MW), Arun-3 (900 MW Nepal). Target 25 GW by 2030."
+    },
+    {
+      "rank": 16,
+      "name": "KPCL Hydro (Karnataka)",
+      "totalRECapacityMW": 3800,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 3800,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (KA)",
+      "source": "KPCL/VVNL records; CEA KA hydro data",
+      "notes": "Sharavathi (1,035 MW), Linganamakki, Supa, Mani Dam, Varahi (230 MW), Gerusoppa (240 MW). Karnataka is 3rd largest hydro state."
+    },
+    {
+      "rank": 17,
       "name": "Hero Future Energies",
       "totalRECapacityMW": 3600,
       "solarMW": 2200,
@@ -209,7 +248,7 @@
       "notes": "Hero Group's clean energy arm. Operational across 10+ states."
     },
     {
-      "rank": 15,
+      "rank": 18,
       "name": "Suzlon Energy Ltd",
       "totalRECapacityMW": 3400,
       "solarMW": 0,
@@ -222,7 +261,7 @@
       "notes": "India's largest wind turbine manufacturer. Also operates own wind farms. Order book 5.1 GW. Market leader in domestic wind OEM."
     },
     {
-      "rank": 16,
+      "rank": 19,
       "name": "Azure Power Global Ltd",
       "totalRECapacityMW": 3200,
       "solarMW": 3200,
@@ -235,7 +274,7 @@
       "notes": "Pure-play solar. Underwent ownership transition."
     },
     {
-      "rank": 17,
+      "rank": 20,
       "name": "Serentica Renewables",
       "totalRECapacityMW": 2900,
       "solarMW": 1800,
@@ -248,7 +287,20 @@
       "notes": "Operational ~2.9 GW. Targeting 7.5 GW by Dec 2027. Supplies green energy to industrial consumers. 40% portfolio for govt utilities."
     },
     {
-      "rank": 18,
+      "rank": 21,
+      "name": "BBMB (Bhakra Beas Mgmt Board)",
+      "totalRECapacityMW": 2900,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 2900,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "Central Govt",
+      "source": "CEA installed capacity; BBMB Annual Report",
+      "notes": "Bhakra Dam (1,325 MW), Dehar (990 MW), Pong (396 MW). One of oldest hydro operators. Shares power between Punjab, Haryana, Rajasthan, HP, Delhi."
+    },
+    {
+      "rank": 22,
       "name": "O2 Power Pvt Ltd",
       "totalRECapacityMW": 2800,
       "solarMW": 2000,
@@ -261,7 +313,7 @@
       "notes": "Backed by Swedish PE firm EQT and Temasek. Rapid growth platform."
     },
     {
-      "rank": 19,
+      "rank": 23,
       "name": "Sprng Energy (Shell)",
       "totalRECapacityMW": 2600,
       "solarMW": 1800,
@@ -274,7 +326,7 @@
       "notes": "Acquired by Shell in 2022 for $1.55 bn. Solar & wind projects across Maharashtra, Karnataka, Andhra Pradesh."
     },
     {
-      "rank": 20,
+      "rank": 24,
       "name": "Inox Green Energy Services Ltd",
       "totalRECapacityMW": 2560,
       "solarMW": 0,
@@ -287,7 +339,7 @@
       "notes": "Wind O&M and IPP arm of Inox Wind. Operates wind farms across GJ, RJ, MP, KA."
     },
     {
-      "rank": 21,
+      "rank": 25,
       "name": "SJVN Green Energy Ltd",
       "totalRECapacityMW": 2400,
       "solarMW": 1500,
@@ -300,7 +352,7 @@
       "notes": "PSU with strong hydro base expanding into solar and wind."
     },
     {
-      "rank": 22,
+      "rank": 26,
       "name": "Continuum Green Energy",
       "totalRECapacityMW": 2400,
       "solarMW": 1200,
@@ -313,7 +365,7 @@
       "notes": "Backed by Morgan Stanley Infrastructure Partners. Balanced solar-wind portfolio. Operational in 6 states."
     },
     {
-      "rank": 23,
+      "rank": 27,
       "name": "Mytrah Energy (Raksha Energy)",
       "totalRECapacityMW": 2200,
       "solarMW": 700,
@@ -326,7 +378,7 @@
       "notes": "Rebranded as Raksha Energy. Wind-heavy portfolio."
     },
     {
-      "rank": 24,
+      "rank": 28,
       "name": "NHPC Ltd (RE Division)",
       "totalRECapacityMW": 2100,
       "solarMW": 1200,
@@ -339,7 +391,7 @@
       "notes": "Traditionally hydro-focused PSU expanding into solar. Commissioned solar projects in Rajasthan, UP, and Madhya Pradesh."
     },
     {
-      "rank": 25,
+      "rank": 29,
       "name": "Ayana Renewable Power (CDC/NIIF)",
       "totalRECapacityMW": 2100,
       "solarMW": 1500,
@@ -352,7 +404,33 @@
       "notes": "Backed by UK's CDC Group and India's NIIF. 2.1 GW operational, 4+ GW pipeline. Focus on solar + wind hybrid."
     },
     {
-      "rank": 26,
+      "rank": 30,
+      "name": "JP Power Ventures (Hydro)",
+      "totalRECapacityMW": 2100,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 2100,
+      "otherMW": 0,
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "source": "JP Power BSE filings; CEA hydro register",
+      "notes": "Baspa-II (300 MW HP), Karcham Wangtoo (1,000 MW HP), Vishnuprayag (400 MW UK). Some assets under stress."
+    },
+    {
+      "rank": 31,
+      "name": "KSEB Hydro (Kerala)",
+      "totalRECapacityMW": 2050,
+      "solarMW": 100,
+      "windMW": 0,
+      "hydroMW": 1950,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (KL)",
+      "source": "KSEBL website; CEA Kerala hydro capacity",
+      "notes": "Idukki (780 MW — arch dam), Sabarigiri (340 MW), Pallivasal, Sholayar, Kuttiyadi. Kerala 70%+ power from hydro historically."
+    },
+    {
+      "rank": 32,
       "name": "Vibrant Energy",
       "totalRECapacityMW": 2000,
       "solarMW": 1500,
@@ -365,7 +443,33 @@
       "notes": "Macquarie-backed RE platform focused on C&I segment."
     },
     {
-      "rank": 27,
+      "rank": 33,
+      "name": "THDC India Ltd",
+      "totalRECapacityMW": 1987,
+      "solarMW": 200,
+      "windMW": 0,
+      "hydroMW": 1787,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "BSE/NSE",
+      "source": "THDC Annual Report FY26; CEA capacity register",
+      "notes": "Tehri Dam (1,000 MW UK), Koteshwar (400 MW UK). Tehri PSP (1,000 MW pumped storage under construction). Expanding into solar."
+    },
+    {
+      "rank": 34,
+      "name": "NEEPCO (North Eastern Electric)",
+      "totalRECapacityMW": 1900,
+      "solarMW": 100,
+      "windMW": 0,
+      "hydroMW": 1800,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "NTPC subsidiary",
+      "source": "NEEPCO/NTPC Annual Report FY26; CEA NE region",
+      "notes": "Doyang (75 MW), Kopili (275 MW), Ranganadi (405 MW), Kameng (600 MW). Key NE India hydro operator."
+    },
+    {
+      "rank": 35,
       "name": "Amplus Solar (Petronas)",
       "totalRECapacityMW": 1800,
       "solarMW": 1800,
@@ -378,7 +482,7 @@
       "notes": "Backed by Malaysian oil major Petronas. Focus on rooftop and open-access solar for C&I."
     },
     {
-      "rank": 28,
+      "rank": 36,
       "name": "Waaree Energies (IPP arm)",
       "totalRECapacityMW": 1800,
       "solarMW": 1800,
@@ -391,7 +495,7 @@
       "notes": "India's largest solar module manufacturer (12 GW capacity). Also developing own solar farms for IPP revenue."
     },
     {
-      "rank": 29,
+      "rank": 37,
       "name": "Mahindra Susten (Mahindra Group)",
       "totalRECapacityMW": 1800,
       "solarMW": 1500,
@@ -404,7 +508,7 @@
       "notes": "Mahindra Group's RE platform. EPC + IPP. JV with Ontario Power Generation (Canada) for 1.6 GW."
     },
     {
-      "rank": 30,
+      "rank": 38,
       "name": "NLC India Ltd (RE)",
       "totalRECapacityMW": 1700,
       "solarMW": 1400,
@@ -417,7 +521,7 @@
       "notes": "Lignite major diversifying into RE. Solar parks in Tamil Nadu, Rajasthan. 10 GW RE target by 2030."
     },
     {
-      "rank": 31,
+      "rank": 39,
       "name": "Amp Energy India",
       "totalRECapacityMW": 1600,
       "solarMW": 1400,
@@ -430,7 +534,7 @@
       "notes": "Formerly Ampin Energy. Distributed solar and C&I open-access focus."
     },
     {
-      "rank": 32,
+      "rank": 40,
       "name": "Vena Energy (India)",
       "totalRECapacityMW": 1600,
       "solarMW": 1100,
@@ -443,7 +547,20 @@
       "notes": "Asia-Pacific focused RE platform. Active in Karnataka, Rajasthan, Tamil Nadu. Backed by GIP."
     },
     {
-      "rank": 33,
+      "rank": 41,
+      "name": "NHDC (Narmada Hydroelectric)",
+      "totalRECapacityMW": 1520,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 1520,
+      "otherMW": 0,
+      "ownership": "central_psu",
+      "listed": "NHPC-MP JV",
+      "source": "NHDC website; CEA capacity register MP",
+      "notes": "Indira Sagar (1,000 MW) and Omkareshwar (520 MW) on Narmada river in MP. JV between NHPC and MP Govt."
+    },
+    {
+      "rank": 42,
       "name": "Jakson Green Pvt Ltd",
       "totalRECapacityMW": 1500,
       "solarMW": 1300,
@@ -456,7 +573,33 @@
       "notes": "Clean energy arm of Jakson Group. Utility-scale solar EPC and IPP. Expanding into green hydrogen."
     },
     {
-      "rank": 34,
+      "rank": 43,
+      "name": "HPPCL (Himachal Pradesh Power)",
+      "totalRECapacityMW": 1500,
+      "solarMW": 50,
+      "windMW": 0,
+      "hydroMW": 1450,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (HP)",
+      "source": "HPPCL website; CEA state-wise hydro data",
+      "notes": "HP state hydro. Shongtong-Karcham (450 MW), Kashang (195 MW), Sainj (100 MW). HP has 27 GW potential."
+    },
+    {
+      "rank": 44,
+      "name": "UJVNL (Uttarakhand Jal Vidyut)",
+      "totalRECapacityMW": 1450,
+      "solarMW": 50,
+      "windMW": 0,
+      "hydroMW": 1400,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (UK)",
+      "source": "UJVNL website; CEA UK hydro register",
+      "notes": "Uttarakhand state hydro. Maneri Bhali-II (304 MW), Dhakrani, Chibro, Khodri. Multiple small hydro across Garhwal and Kumaon."
+    },
+    {
+      "rank": 45,
       "name": "Axis Energy Ventures (KKR)",
       "totalRECapacityMW": 1400,
       "solarMW": 1000,
@@ -469,7 +612,7 @@
       "notes": "KKR's India RE platform. Acquired Ramky group's solar assets. Building 5 GW portfolio."
     },
     {
-      "rank": 35,
+      "rank": 46,
       "name": "Engie India (Solar & Wind)",
       "totalRECapacityMW": 1400,
       "solarMW": 900,
@@ -482,7 +625,7 @@
       "notes": "French energy major's India operations. Solar in Rajasthan, Wind in Gujarat. Also developing green hydrogen."
     },
     {
-      "rank": 36,
+      "rank": 47,
       "name": "EDF Renewables India",
       "totalRECapacityMW": 1200,
       "solarMW": 800,
@@ -495,7 +638,33 @@
       "notes": "India arm of French utility EDF. Solar and wind projects in southern & western India."
     },
     {
-      "rank": 37,
+      "rank": 48,
+      "name": "JKSPDC (J&K Power Dev Corp)",
+      "totalRECapacityMW": 1200,
+      "solarMW": 50,
+      "windMW": 0,
+      "hydroMW": 1150,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (JK)",
+      "source": "JKSPDC website; CEA J&K hydro register",
+      "notes": "Baglihar (900 MW), Uri-II (240 MW). J&K has massive untapped hydro potential."
+    },
+    {
+      "rank": 49,
+      "name": "Teesta Urja (Sikkim)",
+      "totalRECapacityMW": 1200,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 1200,
+      "otherMW": 0,
+      "ownership": "private",
+      "listed": "Unlisted",
+      "source": "CEA NE hydro register",
+      "notes": "Teesta-III HEP (1,200 MW) in Sikkim. One of largest private hydro projects."
+    },
+    {
+      "rank": 50,
       "name": "Torrent Power Ltd (RE)",
       "totalRECapacityMW": 1100,
       "solarMW": 800,
@@ -508,7 +677,7 @@
       "notes": "Gujarat-based utility with gas + solar + wind portfolio. Active on IEX power exchange. Expanding RE for distribution."
     },
     {
-      "rank": 38,
+      "rank": 51,
       "name": "CleanMax Enviro Energy",
       "totalRECapacityMW": 1000,
       "solarMW": 900,
@@ -521,7 +690,7 @@
       "notes": "Leading C&I solar provider. 850+ corporate clients. Hybrid solar-wind-storage solutions for industries."
     },
     {
-      "rank": 39,
+      "rank": 52,
       "name": "Orient Green Power (CLP India)",
       "totalRECapacityMW": 900,
       "solarMW": 0,
@@ -534,7 +703,7 @@
       "notes": "Wind IPP with assets in Tamil Nadu, Karnataka, Andhra Pradesh. Associated with CLP/Apraava Energy."
     },
     {
-      "rank": 40,
+      "rank": 53,
       "name": "Fourth Partner Energy",
       "totalRECapacityMW": 850,
       "solarMW": 850,
@@ -547,7 +716,7 @@
       "notes": "TPG-backed distributed solar company. Rooftop and open-access for 350+ commercial clients across India."
     },
     {
-      "rank": 41,
+      "rank": 54,
       "name": "Sterlite Power / Vedanta (RE)",
       "totalRECapacityMW": 800,
       "solarMW": 600,
@@ -560,7 +729,7 @@
       "notes": "Primarily captive RE for aluminium smelters. Sterlite Power focuses on transmission infrastructure."
     },
     {
-      "rank": 42,
+      "rank": 55,
       "name": "Tata Power Solar Systems (EPC+IPP)",
       "totalRECapacityMW": 800,
       "solarMW": 800,
@@ -573,7 +742,7 @@
       "notes": "Leading solar EPC + rooftop installer. Own captive/IPP solar assets. Major module manufacturer (4 GW)."
     },
     {
-      "rank": 43,
+      "rank": 56,
       "name": "Eden Renewables India (EDF + SITAC)",
       "totalRECapacityMW": 800,
       "solarMW": 800,
@@ -586,7 +755,20 @@
       "notes": "JV between EDF Renewables and SITAC Group. Utility-scale solar in Rajasthan and Karnataka."
     },
     {
-      "rank": 44,
+      "rank": 57,
+      "name": "Sutlej Jal (HPSEB subsidiary)",
+      "totalRECapacityMW": 800,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 800,
+      "otherMW": 0,
+      "ownership": "state_psu",
+      "listed": "State Govt (HP)",
+      "source": "HPSEB records; CEA HP hydro register",
+      "notes": "HP state boards hydro arm. Small and medium stations across Satluj, Beas, Ravi basins."
+    },
+    {
+      "rank": 58,
       "name": "Sunsure Energy",
       "totalRECapacityMW": 700,
       "solarMW": 700,
@@ -599,7 +781,7 @@
       "notes": "Round-the-clock RE solutions provider. Target 10 GW by 2030. Recently commissioned 105 MWp in UP."
     },
     {
-      "rank": 45,
+      "rank": 59,
       "name": "KPI Green Energy",
       "totalRECapacityMW": 700,
       "solarMW": 700,
@@ -612,7 +794,7 @@
       "notes": "Gujarat-based solar IPP + C&I open-access. Fast-growing. 700 MW operational, 2 GW pipeline."
     },
     {
-      "rank": 46,
+      "rank": 60,
       "name": "Coal India Ltd (Solar arm)",
       "totalRECapacityMW": 600,
       "solarMW": 600,
@@ -625,7 +807,7 @@
       "notes": "Irony: World's largest coal miner is setting up solar on mine-lands. Target 3 GW solar by 2028. Using degraded mine land."
     },
     {
-      "rank": 47,
+      "rank": 61,
       "name": "GIPCL (Gujarat Industries Power)",
       "totalRECapacityMW": 600,
       "solarMW": 400,
@@ -638,7 +820,7 @@
       "notes": "Gujarat state JV. Mix of thermal + RE. Expanding solar at Charanka Solar Park."
     },
     {
-      "rank": 48,
+      "rank": 62,
       "name": "Juniper Green Energy (Edelweiss)",
       "totalRECapacityMW": 600,
       "solarMW": 600,
@@ -651,7 +833,20 @@
       "notes": "Edelweiss-backed solar platform. C&I open-access focus. 600 MW operational, 1.5 GW in development."
     },
     {
-      "rank": 49,
+      "rank": 63,
+      "name": "GVK Power (Hydro)",
+      "totalRECapacityMW": 540,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 540,
+      "otherMW": 0,
+      "ownership": "private",
+      "listed": "BSE/NSE",
+      "source": "GVK Power BSE filings; CEA installed capacity",
+      "notes": "Alaknanda HEP (330 MW UK). GVK Group. Hydro in Uttarakhand."
+    },
+    {
+      "rank": 64,
       "name": "Vikram Solar (IPP)",
       "totalRECapacityMW": 500,
       "solarMW": 500,
@@ -664,7 +859,7 @@
       "notes": "Top solar module manufacturer (3.5 GW production). Small IPP arm with own solar farms in West Bengal, Rajasthan."
     },
     {
-      "rank": 50,
+      "rank": 65,
       "name": "Inox Wind Ltd (OEM + IPP)",
       "totalRECapacityMW": 500,
       "solarMW": 0,
@@ -677,7 +872,7 @@
       "notes": "Wind turbine manufacturer + small IPP portfolio. Order book 3.2 GW. Parent of Inox Green Energy Services."
     },
     {
-      "rank": 51,
+      "rank": 66,
       "name": "CESC (RE arm)",
       "totalRECapacityMW": 500,
       "solarMW": 300,
@@ -690,7 +885,7 @@
       "notes": "RP-Sanjiv Goenka Group's renewable arm alongside coal fleet. Growing solar in Rajasthan and MP."
     },
     {
-      "rank": 52,
+      "rank": 67,
       "name": "Rays Power Infra",
       "totalRECapacityMW": 500,
       "solarMW": 500,
@@ -703,7 +898,7 @@
       "notes": "Solar EPC + IPP. 500 MW own portfolio. Active in Rajasthan, MP, UP, Maharashtra."
     },
     {
-      "rank": 53,
+      "rank": 68,
       "name": "Refex Green Power",
       "totalRECapacityMW": 450,
       "solarMW": 450,
@@ -716,7 +911,20 @@
       "notes": "Chennai-based. Solar IPP + BESS. Targeting 5 GW by 2028. Also in EV charging infrastructure."
     },
     {
-      "rank": 54,
+      "rank": 69,
+      "name": "Malana Power Company",
+      "totalRECapacityMW": 430,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 430,
+      "otherMW": 0,
+      "ownership": "private",
+      "listed": "Unlisted (Everest Group)",
+      "source": "CEA small hydro register; HP Electricity Board records",
+      "notes": "Malana-I (86 MW), Malana-II (192 MW), Allain Duhangan (192 MW) in Himachal Pradesh. Run-of-river projects in Kullu valley."
+    },
+    {
+      "rank": 70,
       "name": "Sterling & Wilson Renewable Energy",
       "totalRECapacityMW": 400,
       "solarMW": 400,
@@ -729,7 +937,7 @@
       "notes": "Primarily solar EPC (built 15+ GW globally). Small own IPP portfolio. Part of Shapoorji Pallonji Group."
     },
     {
-      "rank": 55,
+      "rank": 71,
       "name": "Hindustan Power Projects",
       "totalRECapacityMW": 400,
       "solarMW": 400,
@@ -740,6 +948,19 @@
       "listed": "Unlisted",
       "source": "Company disclosures; CEA solar capacity register",
       "notes": "Diversified power company with solar assets in Madhya Pradesh and Rajasthan."
+    },
+    {
+      "rank": 72,
+      "name": "L&T Hydro Power",
+      "totalRECapacityMW": 300,
+      "solarMW": 0,
+      "windMW": 0,
+      "hydroMW": 300,
+      "otherMW": 0,
+      "ownership": "private",
+      "listed": "BSE/NSE (L&T)",
+      "source": "L&T Annual Report FY26",
+      "notes": "Small hydro IPP alongside massive hydro EPC business. Own assets in HP."
     }
   ]
 }

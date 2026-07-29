@@ -49,6 +49,7 @@ export function MarketPlayersSection() {
     : data.companies.filter((c) => {
         if (filterType === 'solar') return c.solarMW > c.windMW && c.solarMW > c.hydroMW;
         if (filterType === 'wind') return c.windMW > c.solarMW;
+        if (filterType === 'hydro') return c.hydroMW > 0;
         if (filterType === 'psu') return c.ownership === 'central_psu';
         return true;
       })
@@ -119,6 +120,7 @@ export function MarketPlayersSection() {
             { id: 'all', label: 'All Players', icon: '🏢' },
             { id: 'solar', label: 'Solar-Led', icon: '☀️' },
             { id: 'wind', label: 'Wind-Led', icon: '💨' },
+            { id: 'hydro', label: 'Hydro', icon: '💧' },
             { id: 'psu', label: 'PSU Only', icon: '🏛️' },
           ].map((f) => (
             <button
