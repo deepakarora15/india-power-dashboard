@@ -133,6 +133,20 @@ export function MarketPlayersSection() {
               {f.icon} {f.label}
             </button>
           ))}
+          <button
+            onClick={() => {
+              const headers = 'Rank,Company,Total RE (MW),Solar (MW),Wind (MW),Hydro (MW),Ownership,Listed,Notes\n';
+              const rows = filteredCompanies.map((c, i) =>
+                `${i+1},"${c.name}",${c.totalRECapacityMW},${c.solarMW},${c.windMW},${c.hydroMW || 0},"${c.ownership}","${c.listed}","${(c.notes || '').replace(/"/g, '""')}"`
+              ).join('\n');
+              const blob = new Blob([headers + rows], { type: 'text/csv' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a'); a.href = url; a.download = 'RE_Market_Players.csv'; a.click(); URL.revokeObjectURL(url);
+            }}
+            className="ml-auto px-3 py-1.5 rounded-lg text-xs font-bold bg-green-600 text-white hover:bg-green-700 transition-all"
+          >
+            📥 Download List
+          </button>
         </div>
 
         {/* Company Cards */}

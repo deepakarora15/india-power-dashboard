@@ -153,8 +153,8 @@ export function ThermalPlayersSection() {
         <h3 className="text-base font-black text-gray-800 mb-1">Top Thermal Power Companies</h3>
         <p className="text-xs text-gray-500 mb-4">Ranked by operational thermal capacity • Click company for details</p>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Filter buttons + Download */}
+        <div className="flex flex-wrap items-center gap-2 mb-4">
           {([
             { id: 'all' as Filter, label: '🔥 All Players', color: 'bg-red-600' },
             { id: 'coal-led' as Filter, label: '🏭 Coal-Led', color: 'bg-gray-600' },
@@ -171,6 +171,24 @@ export function ThermalPlayersSection() {
               {f.label}
             </button>
           ))}
+          <button
+            onClick={() => {
+              const headers = 'Rank,Company,Total MW,Coal MW,Gas MW,Lignite MW,Ownership,Listed,Notes\n';
+              const rows = filteredCompanies.map((c, i) =>
+                `${i+1},"${c.name}",${c.totalThermalMW},${c.coalMW},${c.gasMW},${c.ligniteMW},"${c.ownership}","${c.listed}","${c.notes.replace(/"/g, '""')}"`
+              ).join('\n');
+              const blob = new Blob([headers + rows], { type: 'text/csv' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = 'Thermal_Power_Companies.csv';
+              a.click();
+              URL.revokeObjectURL(url);
+            }}
+            className="ml-auto px-3 py-1.5 rounded-lg text-xs font-bold bg-green-600 text-white hover:bg-green-700 transition-all"
+          >
+            📥 Download List
+          </button>
         </div>
 
         {/* Companies list */}
