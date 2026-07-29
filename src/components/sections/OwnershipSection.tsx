@@ -252,6 +252,53 @@ export function OwnershipSection() {
             </div>
           </div>
 
+          {/* Upcoming / Pipeline Capacity */}
+          <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
+            <h4 className="text-sm font-bold text-gray-700 mb-3">📈 Upcoming Capacity — Under Construction / Pipeline</h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-b border-blue-200">
+                    <th className="text-left py-2 px-2 font-bold text-gray-600">Company</th>
+                    <th className="text-left py-2 px-2 font-bold text-gray-600">Upcoming (MW)</th>
+                    <th className="text-left py-2 px-2 font-bold text-gray-600">Type</th>
+                    <th className="text-left py-2 px-2 font-bold text-gray-600">Expected By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(selectedOwnership === 'central_psu' ? [
+                    { name: 'NTPC Ltd', upcoming: '15,000', type: 'Solar + Coal (Khurja, Talcher)', by: 'FY27-28' },
+                    { name: 'NTPC RE (Green Energy)', upcoming: '22,000', type: 'Solar & Wind (pan-India)', by: 'FY28-30' },
+                    { name: 'NHPC Ltd', upcoming: '8,500', type: 'Hydro (Subansiri, Parbati)', by: 'FY28-30' },
+                    { name: 'SJVN Ltd', upcoming: '5,000', type: 'Hydro + Solar (HP, Bihar)', by: 'FY27-29' },
+                    { name: 'NLC India', upcoming: '4,000', type: 'Solar + Lignite (TN, Rajasthan)', by: 'FY27-28' },
+                  ] : selectedOwnership === 'state_psu' ? [
+                    { name: 'MAHAGENCO', upcoming: '3,200', type: 'Solar (Dondaicha, Sakri parks)', by: 'FY27-28' },
+                    { name: 'GSECL (Gujarat)', upcoming: '2,800', type: 'Solar + Wind (Kutch, Banaskantha)', by: 'FY27-28' },
+                    { name: 'TANGEDCO (Tamil Nadu)', upcoming: '2,500', type: 'Solar + Pumped Hydro', by: 'FY28-29' },
+                    { name: 'KPCL (Karnataka)', upcoming: '2,000', type: 'Solar (Pavagada Phase-3)', by: 'FY27' },
+                    { name: 'RRVUNL (Rajasthan)', upcoming: '3,500', type: 'Solar (Bhadla extension)', by: 'FY27-28' },
+                  ] : [
+                    { name: 'Adani Green Energy', upcoming: '25,000', type: 'Solar & Wind (Khavda 30GW park)', by: 'FY27-30' },
+                    { name: 'ReNew Energy', upcoming: '7,000', type: 'Solar + Wind + Hybrid', by: 'FY27-28' },
+                    { name: 'Tata Power RE', upcoming: '8,300', type: 'Solar + Wind (pan-India)', by: 'FY27-29' },
+                    { name: 'JSW Energy', upcoming: '14,200', type: 'Solar + Wind + Hydro storage', by: 'FY28-30' },
+                    { name: 'Greenko Group', upcoming: '5,000', type: 'Pumped Hydro + RE (AP, Telangana)', by: 'FY27-28' },
+                    { name: 'NTPC RE (via JV)', upcoming: '3,000', type: 'Wind (offshore Gujarat)', by: 'FY29-30' },
+                  ]).map((item, i) => (
+                    <tr key={i} className="border-b border-blue-100 hover:bg-blue-50/50">
+                      <td className="py-2 px-2 font-semibold text-gray-800">{item.name}</td>
+                      <td className="py-2 px-2 font-black text-blue-700">{item.upcoming} MW</td>
+                      <td className="py-2 px-2 text-gray-600">{item.type}</td>
+                      <td className="py-2 px-2 text-gray-500">{item.by}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-[10px] text-gray-400 mt-2">Source: Company annual reports, SECI auction results, CEA pipeline tracker (FY26-27)</p>
+          </div>
+
           {/* Companies List */}
           <div className="border-t border-gray-200 pt-5">
             <h4 className="text-sm font-bold text-gray-700 mb-4">🏢 Top Companies — {formatOwnershipLabel(selectedOwnership)}</h4>
