@@ -37,6 +37,13 @@ export function AppShell({ children }: AppShellProps) {
       <header className="icici-gradient sticky top-0 z-50 shadow-lg">
         <div className="max-w-[1920px] mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
+            {/* ICICI Lombard Logo */}
+            <div className="hidden tablet:flex items-center gap-2">
+              <div className="bg-gradient-to-r from-[#E85D04] to-[#F99D27] rounded-lg px-3 py-1.5">
+                <span className="text-white font-black text-sm" style={{ fontStyle: 'italic' }}>i</span>
+                <span className="text-white font-black text-sm">CICI Lombard</span>
+              </div>
+            </div>
             <div className="hidden tablet:block">
               <h1 className="text-lg font-bold text-white leading-tight">
                 India {sectorView === 'all' ? 'Power Sector' : sectorView === 'fossil' ? 'Fossil Energy' : 'Non-Fossil Energy'}
@@ -107,20 +114,19 @@ export function AppShell({ children }: AppShellProps) {
 
       {/* Main Content */}
       <main className="flex-1 max-w-[1920px] mx-auto w-full px-6 py-6 pb-16">
-        {/* Disclaimer Banner */}
-        <div className="mb-4 px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg text-center">
-          <p className="text-[12px] text-amber-800 font-semibold">⚠️ ICICI Lombard Internal Use Only — Confidential — Not for external circulation or distribution</p>
-        </div>
         {children}
       </main>
 
       {/* Footer - Fixed at bottom */}
       <footer className="fixed bottom-0 left-0 right-0 z-50 bg-[#263f4a] py-2 px-6" style={{ borderTop: '3px solid #4db6ac' }}>
         <div className="max-w-[1920px] mx-auto flex items-center justify-between">
-          <span className="text-[14px] text-white/90">
+          <span className="text-[13px] text-white/90">
             ICICI Lombard General Insurance Company Ltd.
           </span>
-          <span className="text-[14px] text-white/90">
+          <span className="text-[11px] text-amber-300 font-semibold">
+            For Internal Use Only
+          </span>
+          <span className="text-[13px] text-white/90">
             Designed by <span className="font-bold text-white">Deepak Arora</span>
           </span>
         </div>
