@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useCapacityData } from '@/hooks/useCapacityData';
 import { useSectorFilter } from '@/hooks/useSectorFilter';
 import { SectorStory } from '@/components/sections/SectorStory';
@@ -120,6 +121,114 @@ export function IndustryOverview() {
           <h3 className="text-xs font-bold text-gray-700">Growth Journey & Future Outlook</h3>
         </div>
         <TimelineSection />
+      </div>
+
+      {/* Upcoming Company Capacity */}
+      <UpcomingCapacityChart />
+    </div>
+  );
+}
+
+// Upcoming capacity data
+const UPCOMING_DATA = [
+  { name: 'Adani Green', current: 20.0, upcoming: 25.0, total: 45.0, type: 'Solar + Wind (Khavda 30 GW)', by: 'FY30', color: '#2E7D32' },
+  { name: 'NTPC RE', current: 5.2, upcoming: 54.8, total: 60.0, type: 'Solar + Wind (pan-India)', by: 'FY32', color: '#1565C0' },
+  { name: 'JSW Energy', current: 5.8, upcoming: 14.2, total: 20.0, type: 'Solar + Wind + Hydro', by: 'FY30', color: '#E65100' },
+  { name: 'ReNew Energy', current: 11.0, upcoming: 7.0, total: 18.0, type: 'Solar + Wind + Hybrid', by: 'FY28', color: '#00838F' },
+  { name: 'Tata Power RE', current: 6.7, upcoming: 8.3, total: 15.0, type: 'Solar + Wind', by: 'FY29', color: '#4527A0' },
+  { name: 'Greenko', current: 9.2, upcoming: 5.8, total: 15.0, type: 'Pumped Hydro + RE', by: 'FY28', color: '#558B2F' },
+  { name: 'NHPC', current: 7.2, upcoming: 8.5, total: 15.7, type: 'Hydro (Subansiri, Parbati)', by: 'FY30', color: '#0277BD' },
+  { name: 'Adani Power', current: 16.0, upcoming: 4.0, total: 20.0, type: 'Coal (under construction)', by: 'FY27', color: '#B71C1C' },
+  { name: 'Sembcorp India', current: 4.8, upcoming: 5.2, total: 10.0, type: 'Solar + Wind', by: 'FY28', color: '#6A1B9A' },
+  { name: 'SJVN', current: 2.5, upcoming: 5.0, total: 7.5, type: 'Hydro + Solar (HP, Bihar)', by: 'FY29', color: '#00695C' },
+];
+
+function UpcomingCapacityChart() {
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [clicked, setClicked] = useState<number | null>(null);
+  const maxTotal = Math.max(...UPCOMING_DATA.map(d => d.total));
+
+  return (
+    <div className="icici-card p-5">
+      <div className="flex items-center gap-2 mb-1">
+        <div className="w-1 h-5 rounded-full bg-icici-maroon" />
+        <h3 className="text-sm font-bold text-gray-700">📈 Upcoming Capacity — Company Growth Pipeline</h3>
+      </div>
+      <p className="text-[12px] text-gray-400 mb-4 ml-3">Current operational + announced pipeline (GW) • Hover for details, click to expand</p>
+
+      <div className="space-y-2.5">
+        {UPCOMING_DATA.map((company, idx) => {
+          const isHovered = hovered === idx;
+          const isClicked = clicked === idx;
+          const currentPct = (company.current / maxTotal) * 100;
+          const upcomingPct = (company.upcoming / maxTotal) * 100;
+
+          return (
+            <div key={idx}>
+              <div
+                className={`p-3 rounded-xl border cursor-pointer transition-all duration-200 ${
+                  isHovered || isClicked ? 'border-gray-300 shadow-md bg-gray-50' : 'border-gray-100 hover:border-gray-200'
+                }`}
+                onMouseEnter={() => setHovered(idx)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setClicked(isClicked ? null : idx)}
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-sm font-bold text-gray-800 w-32 truncate">{company.name}</span>
+                  <div className="flex-1 flex items-center h-6 bg-gray-100 rounded-full overflow-hidden">
+                    {/* Current bar */}
+                    <div
+                      className="h-full flex items-center justify-center text-[10px] text-white font-bold rounded-l-full transition-all duration-500"
+                      style={{ width: `${currentPct}%`, backgroundColor: company.color }}
+                    >
+                      {currentPct > 12 ? `${company.current} GW` : ''}
+                    </div>
+                    {/* Upcoming bar (striped) */}
+                    <div
+                      className="h-full flex items-center justify-center text-[10px] font-bold rounded-r-full transition-all duration-500"
+                      style={{
+                        width: `${upcomingPct}%`,
+                        backgroundColor: company.color,
+                        opacity: 0.4,
+                        backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,0.3) 3px, rgba(255,255,255,0.3) 6px)',
+                      }}
+                    >
+                      {upcomingPct > 10 ? `+${company.upcoming}` : ''}
+                    </div>
+                  </div>
+                  <span className="text-sm font-black text-gray-800 w-16 text-right">{company.total} GW</span>
+                </div>
+
+                {/* Hover tooltip */}
+                {isHovered && !isClicked && (
+                  <div className="text-[11px] text-gray-500 ml-[140px] animate-fadeIn">
+                    Current: {company.current} GW → Target: {company.total} GW by {company.by} | {company.type}
+                  </div>
+                )}
+              </div>
+
+              {/* Expanded detail on click */}
+              {isClicked && (
+                <div className="ml-4 mt-1 p-3 rounded-lg bg-blue-50 border border-blue-200 animate-fadeIn">
+                  <div className="grid grid-cols-4 gap-3 text-xs">
+                    <div><span className="text-gray-500">Current:</span> <strong>{company.current} GW</strong></div>
+                    <div><span className="text-gray-500">Pipeline:</span> <strong className="text-blue-700">+{company.upcoming} GW</strong></div>
+                    <div><span className="text-gray-500">Target:</span> <strong className="text-green-700">{company.total} GW</strong></div>
+                    <div><span className="text-gray-500">Timeline:</span> <strong>{company.by}</strong></div>
+                  </div>
+                  <p className="text-[11px] text-gray-600 mt-2">📋 {company.type}</p>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Legend */}
+      <div className="flex items-center gap-4 mt-4 pt-3 border-t border-gray-100">
+        <div className="flex items-center gap-1.5"><div className="w-4 h-3 rounded bg-gray-600" /><span className="text-[11px] text-gray-500">Current Capacity</span></div>
+        <div className="flex items-center gap-1.5"><div className="w-4 h-3 rounded bg-gray-400" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.4) 2px, rgba(255,255,255,0.4) 4px)' }} /><span className="text-[11px] text-gray-500">Upcoming / Pipeline</span></div>
+        <span className="text-[10px] text-gray-400 ml-auto">Source: Company annual reports, SECI auction results, CEA pipeline</span>
       </div>
     </div>
   );
