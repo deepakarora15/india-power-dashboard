@@ -5,15 +5,12 @@ import { formatMW } from '@/utils/formatting';
 import { getSourceColor } from '@/utils/colors';
 import { ThermalPlayersSection } from '@/components/sections/ThermalPlayersSection';
 
-function ThermalPlayersInline() {
-  return <ThermalPlayersSection />;
-}
-
 export function MarketPlayersSection() {
   const { data, isLoading } = useMarketPlayers();
   const { sectorView } = useSectorFilter();
   const [selectedCompany, setSelectedCompany] = useState<MarketPlayer | null>(null);
   const [filterType, setFilterType] = useState<string>('all');
+  const [activeTab, setActiveTab] = useState<'non-fossil' | 'fossil'>(sectorView === 'fossil' ? 'fossil' : 'non-fossil');
 
   if (isLoading) {
     return <div className="animate-pulse h-96 bg-gray-200 rounded-xl" />;
@@ -27,9 +24,22 @@ export function MarketPlayersSection() {
     );
   }
 
-  // When fossil view is active, show Thermal companies
-  if (sectorView === 'fossil') {
-    return <ThermalPlayersInline />;
+  // Show Fossil tab content
+  if (activeTab === 'fossil') {
+    return (
+      <div className="space-y-5">
+        {/* Tab switcher */}
+        <div className="flex gap-2">
+          <button onClick={() => setActiveTab('non-fossil')} className="px-4 py-2 rounded-lg text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:border-green-400 transition-all">
+            🌿 Non-Fossil Players
+          </button>
+          <button onClick={() => setActiveTab('fossil')} className="px-4 py-2 rounded-lg text-sm font-bold bg-red-600 text-white shadow-md">
+            🔥 Fossil / Thermal Players
+          </button>
+        </div>
+        <ThermalPlayersSection />
+      </div>
+    );
   }
 
   const maxCapacity = data.companies[0]?.totalRECapacityMW || 1;
@@ -45,7 +55,17 @@ export function MarketPlayersSection() {
   ).sort((a, b) => b.totalRECapacityMW - a.totalRECapacityMW);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
+      {/* Tab switcher */}
+      <div className="flex gap-2">
+        <button onClick={() => setActiveTab('non-fossil')} className="px-4 py-2 rounded-lg text-sm font-bold bg-green-600 text-white shadow-md">
+          🌿 Non-Fossil Players
+        </button>
+        <button onClick={() => setActiveTab('fossil')} className="px-4 py-2 rounded-lg text-sm font-bold bg-white text-gray-600 border border-gray-200 hover:border-red-400 transition-all">
+          🔥 Fossil / Thermal Players
+        </button>
+      </div>
+
       {/* National RE Summary */}
       <div className="icici-card p-5">
         <h3 className="text-sm font-bold text-gray-700 mb-1">
