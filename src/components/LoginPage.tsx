@@ -33,15 +33,7 @@ export function LoginPage() {
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             {/* ICICI Lombard Logo */}
             <div className="text-center mb-6">
-              <div className="inline-block bg-gradient-to-r from-[#D94F00] to-[#F47B20] rounded-xl px-6 py-3 shadow-lg mb-4">
-                <span className="text-white text-2xl font-black italic leading-none" style={{ fontFamily: 'serif' }}>i</span>
-                <span className="text-white text-xl font-black tracking-tight">CICI</span>
-                <span className="text-white text-xl font-black ml-1 flex-inline items-center">
-                  <span className="inline-block w-6 h-6 rounded-full border-2 border-white text-center text-[11px] font-black leading-[22px] mx-0.5">G</span>
-                  Lombard
-                </span>
-                <div className="text-white/80 text-[9px] font-semibold tracking-[2px] mt-1 uppercase">— General Insurance —</div>
-              </div>
+              <img src="/icici-logo.svg" alt="ICICI Lombard" className="h-16 mx-auto mb-4 rounded-xl shadow-lg" />
               <h1 className="text-lg font-black text-gray-900">India Power Sector Dashboard</h1>
               <p className="text-xs text-gray-500 mt-1">Power & Energy Practice</p>
             </div>
