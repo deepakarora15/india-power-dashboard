@@ -72,18 +72,7 @@ export function LoginPage() {
 
           {/* Credentials hint */}
           <div className="mt-6 p-3 rounded-lg bg-gray-50 border border-gray-100">
-            <p className="text-[12px] font-bold text-gray-500 uppercase mb-2 text-center">Quick Login</p>
-            <div className="grid grid-cols-2 gap-3 text-[12px]">
-              <div className="text-center p-2 rounded bg-white border border-gray-200">
-                <div className="font-bold text-gray-700">👤 User Access</div>
-                <div className="text-gray-500 mt-0.5">Type: <strong>user</strong></div>
-              </div>
-              <div className="text-center p-2 rounded bg-white border border-gray-200">
-                <div className="font-bold text-gray-700">🔑 Admin Access</div>
-                <div className="text-gray-500 mt-0.5">Type: <strong>admin</strong></div>
-              </div>
-            </div>
-            <p className="text-[11px] text-gray-400 mt-2 text-center">Just enter your username and hit Sign In</p>
+            <p className="text-[11px] text-gray-400 text-center">Enter your username to access the dashboard</p>
           </div>
         </div>
 

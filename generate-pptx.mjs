@@ -11,7 +11,7 @@ const NAVY = '005B75';
 const ORANGE = 'F99D27';
 const DARK = '1A1A2E';
 const WHITE = 'FFFFFF';
-const GREEN = '4CAF50';
+const GREEN = '4CAF50';rom 
 
 // Helper: Add branded footer
 function addFooter(slide, num) {
