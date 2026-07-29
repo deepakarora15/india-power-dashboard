@@ -12,7 +12,6 @@ const SECTIONS = [
   { id: 'ownership', label: 'Ownership', icon: '🏛️' },
   { id: 'risks', label: 'Risk Analysis', icon: '🛡️' },
   { id: 'market-players', label: 'Market Players', icon: '🏢' },
-  { id: 'thermal-players', label: 'Thermal Players', icon: '🔥' },
   { id: 'news', label: 'News', icon: '📰' },
   { id: 'downloads', label: 'Downloads', icon: '📥' },
   { id: 'audit-logs', label: 'Audit Logs', icon: '📋' },

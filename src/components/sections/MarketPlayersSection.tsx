@@ -3,6 +3,11 @@ import { useMarketPlayers, MarketPlayer } from '@/hooks/useMarketPlayers';
 import { useSectorFilter } from '@/hooks/useSectorFilter';
 import { formatMW } from '@/utils/formatting';
 import { getSourceColor } from '@/utils/colors';
+import { ThermalPlayersSection } from '@/components/sections/ThermalPlayersSection';
+
+function ThermalPlayersInline() {
+  return <ThermalPlayersSection />;
+}
 
 export function MarketPlayersSection() {
   const { data, isLoading } = useMarketPlayers();
@@ -22,14 +27,9 @@ export function MarketPlayersSection() {
     );
   }
 
-  // Market Players data is for RE companies only — hide when fossil view is active
+  // When fossil view is active, show Thermal companies
   if (sectorView === 'fossil') {
-    return (
-      <div className="icici-card p-6 border-l-4 border-amber-400">
-        <p className="font-bold text-amber-700">Market Players data is available for Non-Fossil sector only</p>
-        <p className="text-xs text-gray-500 mt-1">Switch to "All" or "Non-Fossil" sector view to see renewable energy market players.</p>
-      </div>
-    );
+    return <ThermalPlayersInline />;
   }
 
   const maxCapacity = data.companies[0]?.totalRECapacityMW || 1;
