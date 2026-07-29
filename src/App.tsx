@@ -13,6 +13,7 @@ import { OwnershipSection } from '@/components/sections/OwnershipSection';
 import { TimelineSection } from '@/components/sections/TimelineSection';
 import { RiskAnalysis } from '@/components/sections/RiskAnalysis';
 import { MarketPlayersSection } from '@/components/sections/MarketPlayersSection';
+import { ThermalPlayersSection } from '@/components/sections/ThermalPlayersSection';
 import { AuditLogsSection } from '@/components/sections/AuditLogsSection';
 import { NewsSection } from '@/components/sections/NewsSection';
 import { DownloadsSection } from '@/components/sections/DownloadsSection';
@@ -98,6 +99,12 @@ function DashboardContent() {
         return (
           <SectionErrorBoundary sectionName="Market Players">
             <MarketPlayersSection />
+          </SectionErrorBoundary>
+        );
+      case 'thermal-players':
+        return (
+          <SectionErrorBoundary sectionName="Thermal Players">
+            <ThermalPlayersSection />
           </SectionErrorBoundary>
         );
       case 'risks':
