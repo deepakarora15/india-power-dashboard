@@ -11,7 +11,7 @@ const SECTIONS = [
   { id: 'generation', label: 'Generation', icon: '⚡' },
   { id: 'ownership', label: 'Ownership', icon: '🏛️' },
   { id: 'risks', label: 'Risk Analysis', icon: '🛡️' },
-  { id: 'market-players', label: 'Market Players', icon: '🏢' },
+  { id: 'market-players', label: 'Market Mapping', icon: '🏢' },
   { id: 'news', label: 'News', icon: '📰' },
   { id: 'downloads', label: 'Downloads', icon: '📥' },
   { id: 'audit-logs', label: 'Audit Logs', icon: '📋' },
