@@ -3,449 +3,697 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>India Power Sector — Complete eBook</title>
+<title>ICICI Lombard — India Power Sector Intelligence Report</title>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
+@page { size: A4; margin: 20mm 18mm 30mm 18mm; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Mulish', sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a2e; background: #fff; }
-.ebook { max-width: 850px; margin: 0 auto; padding: 40px 50px; }
+body { font-family: 'Mulish', sans-serif; font-size: 14px; line-height: 1.75; color: #1a1a2e; background: #fff; }
+.ebook { max-width: 880px; margin: 0 auto; padding: 0 50px; }
+
+/* ICICI Brand Colors */
+:root { --maroon: #B02A30; --navy: #005B75; --orange: #F99D27; --dark: #1a1a2e; }
 
 /* Cover */
-.cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(160deg, #003D50 0%, #005B75 40%, #B02A30 100%); color: white; padding: 80px 40px; margin: -40px -50px 40px -50px; }
-.cover h1 { font-size: 42px; font-weight: 900; margin-bottom: 10px; }
-.cover .subtitle { font-size: 18px; opacity: 0.9; font-weight: 600; }
-.cover .stats { display: flex; gap: 30px; margin-top: 40px; }
-.cover .stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 20px 25px; }
-.cover .stat .val { font-size: 28px; font-weight: 900; }
-.cover .stat .lbl { font-size: 11px; opacity: 0.7; text-transform: uppercase; margin-top: 4px; }
-.cover .meta { margin-top: 50px; font-size: 12px; opacity: 0.6; line-height: 2; }
+.cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(160deg, #8B1A1F 0%, #B02A30 30%, #005B75 70%, #003D50 100%); color: white; padding: 80px 40px; margin: 0 -50px 0 -50px; page-break-after: always; }
+.cover .brand-logo { font-size: 36px; font-weight: 900; letter-spacing: -1px; margin-bottom: 5px; }
+.cover .brand-sub { font-size: 13px; opacity: 0.7; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 60px; }
+.cover h1 { font-size: 38px; font-weight: 900; margin-bottom: 8px; line-height: 1.2; }
+.cover .subtitle { font-size: 17px; opacity: 0.9; font-weight: 600; margin-bottom: 15px; }
+.cover .edition { font-size: 12px; opacity: 0.6; background: rgba(255,255,255,0.1); display: inline-block; padding: 6px 16px; border-radius: 20px; margin-bottom: 40px; }
+.cover .stats { display: flex; gap: 20px; margin-top: 30px; flex-wrap: wrap; justify-content: center; }
+.cover .stat { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 18px 22px; min-width: 130px; }
+.cover .stat .val { font-size: 26px; font-weight: 900; }
+.cover .stat .lbl { font-size: 10px; opacity: 0.7; text-transform: uppercase; margin-top: 3px; }
+.cover .meta { margin-top: 50px; font-size: 11px; opacity: 0.5; line-height: 2.2; }
+.cover .confidential { margin-top: 20px; background: rgba(255,0,0,0.15); border: 1px solid rgba(255,100,100,0.3); padding: 8px 20px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+
+/* Header band on each page */
+.page-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 2px solid var(--maroon); margin-bottom: 25px; }
+.page-header .brand { font-size: 11px; font-weight: 800; color: var(--maroon); text-transform: uppercase; letter-spacing: 1px; }
+.page-header .doc-title { font-size: 10px; color: #888; }
+
+/* Disclaimer footer */
+.disclaimer-footer { position: fixed; bottom: 0; left: 0; right: 0; background: #f8f8f8; border-top: 1px solid #ddd; padding: 6px 20px; font-size: 9px; color: #888; text-align: center; }
+@media screen { .disclaimer-footer { position: relative; margin-top: 40px; } }
+.disclaimer-band { background: #FFF3E0; border: 1px solid #FFE0B2; border-radius: 4px; padding: 10px 15px; margin: 20px 0; font-size: 11px; color: #795548; text-align: center; }
 
 /* TOC */
-.toc { page-break-after: always; margin: 40px 0; }
-.toc h2 { font-size: 24px; color: #005B75; border-bottom: 3px solid #005B75; padding-bottom: 8px; margin-bottom: 20px; }
-.toc-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted #ddd; }
-.toc-item .title { font-weight: 700; }
+.toc { page-break-after: always; padding-top: 20px; }
+.toc h2 { font-size: 22px; color: var(--maroon); border-bottom: 3px solid var(--maroon); padding-bottom: 8px; margin-bottom: 20px; }
+.toc-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dotted #ccc; font-size: 14px; }
+.toc-item .title { font-weight: 700; color: #333; }
 
 /* Chapters */
-.chapter { page-break-before: always; margin-top: 50px; }
+.chapter { page-break-before: always; padding-top: 15px; }
 .chapter:first-of-type { page-break-before: avoid; }
-.chapter-num { display: inline-block; background: #005B75; color: white; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 900; margin-right: 10px; }
-h2 { font-size: 22px; font-weight: 900; color: #005B75; margin-bottom: 15px; display: flex; align-items: center; }
-h3 { font-size: 17px; font-weight: 800; color: #333; margin: 20px 0 10px 0; }
+.chapter-num { display: inline-flex; align-items: center; justify-content: center; background: var(--maroon); color: white; width: 30px; height: 30px; border-radius: 50%; font-size: 13px; font-weight: 900; margin-right: 10px; flex-shrink: 0; }
+h2 { font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 15px; display: flex; align-items: center; }
+h3 { font-size: 16px; font-weight: 800; color: #333; margin: 22px 0 10px 0; border-left: 4px solid var(--maroon); padding-left: 12px; }
+h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin: 15px 0 8px 0; }
 p { margin-bottom: 12px; }
+ul, ol { margin: 8px 0 15px 22px; }
+li { margin-bottom: 6px; }
 
 /* Tables */
-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
-th, td { padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; }
-th { background: #005B75; color: white; font-weight: 700; font-size: 12px; text-transform: uppercase; }
-tr:nth-child(even) { background: #f8fafb; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px; page-break-inside: avoid; }
+th, td { padding: 9px 11px; border: 1px solid #ddd; text-align: left; }
+th { background: var(--maroon); color: white; font-weight: 700; font-size: 11px; text-transform: uppercase; }
+tr:nth-child(even) { background: #fafbfc; }
 .highlight-row { background: #e8f5e9 !important; font-weight: 700; }
 
 /* Stat boxes */
-.stat-row { display: flex; gap: 15px; margin: 15px 0; }
-.stat-box { flex: 1; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 15px; text-align: center; }
-.stat-box .val { font-size: 24px; font-weight: 900; color: #B02A30; }
-.stat-box .lbl { font-size: 10px; color: #666; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
+.stat-row { display: flex; gap: 12px; margin: 15px 0; flex-wrap: wrap; }
+.stat-box { flex: 1; min-width: 120px; background: #f8f9fa; border: 1px solid #e0e0e0; border-top: 3px solid var(--maroon); border-radius: 8px; padding: 14px; text-align: center; }
+.stat-box .val { font-size: 22px; font-weight: 900; color: var(--maroon); }
+.stat-box .lbl { font-size: 9px; color: #666; text-transform: uppercase; font-weight: 700; margin-top: 3px; }
 
 /* Bar */
-.bar-row { display: flex; height: 28px; border-radius: 6px; overflow: hidden; margin: 10px 0; }
+.bar-row { display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin: 10px 0; border: 1px solid #ccc; }
 .bar-seg { display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 700; }
 
 /* Insight */
-.insight { background: #FFF8E1; border-left: 4px solid #F99D27; border-radius: 4px; padding: 14px 18px; margin: 15px 0; font-size: 13px; }
+.insight { background: linear-gradient(135deg, #FFF8E1, #FFF3E0); border-left: 4px solid var(--orange); border-radius: 4px; padding: 14px 18px; margin: 18px 0; font-size: 13px; page-break-inside: avoid; }
 .insight strong { color: #E65100; }
 
-/* Footer */
-.page-footer { text-align: center; padding: 30px 0; border-top: 2px solid #e0e0e0; margin-top: 50px; font-size: 11px; color: #999; }
+/* Key point box */
+.key-point { background: #E3F2FD; border-left: 4px solid var(--navy); border-radius: 4px; padding: 12px 16px; margin: 15px 0; font-size: 13px; }
+.key-point strong { color: var(--navy); }
+
+/* Final footer */
+.page-footer { text-align: center; padding: 25px 0; border-top: 3px solid var(--maroon); margin-top: 40px; }
+.page-footer .brand-line { font-size: 14px; font-weight: 800; color: var(--maroon); margin-bottom: 5px; }
 </style>
 </head>
 <body>
 <div class="ebook">
 
-<!-- COVER PAGE -->
+<!-- ==================== COVER PAGE ==================== -->
 <div class="cover">
-  <h1>⚡ India Power Sector</h1>
-  <p class="subtitle">A Complete Intelligence Guide</p>
+  <div class="brand-logo">ICICI LOMBARD</div>
+  <div class="brand-sub">General Insurance Company Limited</div>
+  
+  <h1>India Power Sector<br/>Intelligence Report</h1>
+  <p class="subtitle">A Comprehensive Analysis of India's Electricity Ecosystem</p>
+  <div class="edition">EDITION: JULY 2026 | FY 2024-25 DATA</div>
+
   <div class="stats">
     <div class="stat"><div class="val">450 GW</div><div class="lbl">Installed Capacity</div></div>
     <div class="stat"><div class="val">1,772 BU</div><div class="lbl">Annual Generation</div></div>
     <div class="stat"><div class="val">45.8%</div><div class="lbl">Non-Fossil Share</div></div>
+    <div class="stat"><div class="val">₹8,000+ Cr</div><div class="lbl">Insurance Premium Pool</div></div>
   </div>
+
   <div class="meta">
-    Data Period: FY 2024-25 | Sources: CEA, MNRE, Ministry of Power<br/>
-    ICICI Lombard General Insurance Company Ltd. | Designed by Deepak Arora
+    Data Sources: Central Electricity Authority | MNRE | Ministry of Power | National Power Portal<br/>
+    Prepared by: Power & Energy Practice, ICICI Lombard GIC Ltd.<br/>
+    Designed by: Deepak Arora
   </div>
+  <div class="confidential">⚠️ STRICTLY CONFIDENTIAL — FOR INTERNAL USE ONLY — NOT FOR CIRCULATION</div>
 </div>
 
-<!-- TABLE OF CONTENTS -->
+<!-- ==================== DISCLAIMER ==================== -->
+<div class="disclaimer-band">
+<strong>IMPORTANT DISCLAIMER:</strong> This document is the proprietary intellectual property of ICICI Lombard General Insurance Company Ltd. It is intended solely for internal use by authorized personnel. Reproduction, distribution, or sharing of this document — in whole or part — with external parties is strictly prohibited without prior written approval from the Management.
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
 <div class="toc">
-  <h2>📖 Table of Contents</h2>
-  <div class="toc-item"><span class="title">Chapter 1: Industry Overview</span></div>
-  <div class="toc-item"><span class="title">Chapter 2: Energy Mix & Source Breakdown</span></div>
-  <div class="toc-item"><span class="title">Chapter 3: Power Generation & Load Factors</span></div>
-  <div class="toc-item"><span class="title">Chapter 4: Ownership Structure</span></div>
-  <div class="toc-item"><span class="title">Chapter 5: Growth Timeline (1975–2025)</span></div>
-  <div class="toc-item"><span class="title">Chapter 6: Future Projections (2026–2032)</span></div>
-  <div class="toc-item"><span class="title">Chapter 7: Market Players — RE Leaders</span></div>
-  <div class="toc-item"><span class="title">Chapter 8: State-wise Distribution</span></div>
-  <div class="toc-item"><span class="title">Chapter 9: Risk Analysis (ISO 31000)</span></div>
-  <div class="toc-item"><span class="title">Chapter 10: Emerging Technologies</span></div>
-  <div class="toc-item"><span class="title">Chapter 11: Insurance Market Opportunity</span></div>
-  <div class="toc-item"><span class="title">Chapter 12: Data Sources & References</span></div>
+<div class="page-header">
+  <span class="brand">ICICI Lombard | Power & Energy Practice</span>
+  <span class="doc-title">India Power Sector Intelligence Report — July 2026</span>
 </div>
+<h2>📖 Table of Contents</h2>
+<div class="toc-item"><span class="title">Chapter 1: Executive Summary & Industry Overview</span></div>
+<div class="toc-item"><span class="title">Chapter 2: Installed Capacity — Energy Mix & Source Breakdown</span></div>
+<div class="toc-item"><span class="title">Chapter 3: Power Generation, Load Factors & Efficiency Analysis</span></div>
+<div class="toc-item"><span class="title">Chapter 4: Ownership Structure & Key Stakeholders</span></div>
+<div class="toc-item"><span class="title">Chapter 5: Historical Growth Journey (1975–2025)</span></div>
+<div class="toc-item"><span class="title">Chapter 6: Future Projections & National Targets (2026–2032)</span></div>
+<div class="toc-item"><span class="title">Chapter 7: Market Players — Renewable Energy Leaders</span></div>
+<div class="toc-item"><span class="title">Chapter 8: State-wise Capacity Distribution & Geography</span></div>
+<div class="toc-item"><span class="title">Chapter 9: Risk Analysis — ISO 31000 Framework</span></div>
+<div class="toc-item"><span class="title">Chapter 10: Emerging Technologies & New Risk Frontiers</span></div>
+<div class="toc-item"><span class="title">Chapter 11: Insurance Market Sizing & Opportunity Analysis</span></div>
+<div class="toc-item"><span class="title">Chapter 12: Underwriting Considerations & Best Practices</span></div>
+<div class="toc-item"><span class="title">Annexure: Data Sources, Glossary & References</span></div>
 
-<!-- CHAPTER 1 -->
-<div class="chapter">
-<h2><span class="chapter-num">1</span> Industry Overview</h2>
-<p>India is the <strong>3rd largest electricity producer</strong> and <strong>3rd largest consumer</strong> globally. The sector has undergone a 22x transformation — from 20 GW in 1975 to 450+ GW in 2025, powering 1.4 billion people across 36 states and union territories.</p>
-
-<div class="stat-row">
-<div class="stat-box"><div class="val">450.29 GW</div><div class="lbl">Total Installed Capacity</div></div>
-<div class="stat-box"><div class="val">1,771.7 BU</div><div class="lbl">Annual Generation FY25</div></div>
-<div class="stat-box"><div class="val">45.8%</div><div class="lbl">Non-Fossil Share</div></div>
-<div class="stat-box"><div class="val">22.5×</div><div class="lbl">Growth Since 1975</div></div>
-</div>
-
-<h3>Key Achievements</h3>
-<ul style="margin:10px 0 15px 20px;">
-<li>World's 3rd largest power system after China and USA</li>
-<li>Achieved 100% village electrification (Saubhagya scheme)</li>
-<li>Solar grew from 0 to 90 GW in just 12 years (2012–2025)</li>
-<li>Crossed 500 GW total generation capacity milestone in 2026</li>
-<li>Committed to Net Zero by 2070 and 500 GW non-fossil by 2030</li>
-</ul>
-
-<div class="insight">
-<strong>💡 Key Insight:</strong> India adds more power capacity per year (~40-50 GW) than most countries have in total. The energy transition is accelerating — 90% of new additions are now renewable.
-</div>
-</div>
-
-<!-- CHAPTER 2 -->
-<div class="chapter">
-<h2><span class="chapter-num">2</span> Energy Mix & Source Breakdown</h2>
-<p>India's power capacity is split between fossil (54.2%) and non-fossil (45.8%) sources. While fossil still dominates, the gap is closing rapidly — non-fossil share has doubled from 24% in 2000 to 45.8% in 2025.</p>
-
-<div class="bar-row">
-<div class="bar-seg" style="width:54.2%;background:#B02A30;">🔥 Fossil 243.87 GW (54.2%)</div>
-<div class="bar-seg" style="width:45.8%;background:#005B75;">🌿 Non-Fossil 206.42 GW (45.8%)</div>
-</div>
-
-<h3>Complete Source Breakdown</h3>
-<table>
-<tr><th>#</th><th>Source</th><th>Category</th><th>Capacity (MW)</th><th>Share</th></tr>
-<tr><td>1</td><td>Coal</td><td>Fossil</td><td>2,11,540</td><td>47.0%</td></tr>
-<tr><td>2</td><td>Solar</td><td>Non-Fossil</td><td>90,570</td><td>20.1%</td></tr>
-<tr><td>3</td><td>Large Hydro</td><td>Non-Fossil</td><td>47,050</td><td>10.4%</td></tr>
-<tr><td>4</td><td>Wind</td><td>Non-Fossil</td><td>47,650</td><td>10.6%</td></tr>
-<tr><td>5</td><td>Gas</td><td>Fossil</td><td>24,900</td><td>5.5%</td></tr>
-<tr><td>6</td><td>Biomass</td><td>Non-Fossil</td><td>11,420</td><td>2.5%</td></tr>
-<tr><td>7</td><td>Nuclear</td><td>Non-Fossil</td><td>8,180</td><td>1.8%</td></tr>
-<tr><td>8</td><td>Lignite</td><td>Fossil</td><td>6,740</td><td>1.5%</td></tr>
-<tr><td>9</td><td>Small Hydro</td><td>Non-Fossil</td><td>5,050</td><td>1.1%</td></tr>
-<tr><td>10</td><td>Diesel</td><td>Fossil</td><td>690</td><td>0.2%</td></tr>
-</table>
-
-<h3>Solar — The Star Performer</h3>
-<p>Solar has grown from nearly zero in 2010 to 90.6 GW by 2025. India is now the 4th largest solar market globally. Tariffs dropped 88% — from ₹17/kWh in 2010 to ₹1.99/kWh in 2024, making solar cheaper than new coal plants.</p>
-
-<h3>Wind — The Pioneer</h3>
-<p>India was an early wind adopter (1990s). With 47.6 GW, it's the 4th largest wind market. Turbines evolved from 250 kW to 5.5 MW. Tamil Nadu, Gujarat, and Rajasthan dominate. Offshore wind (30 GW target) is the next frontier.</p>
-
-<div class="insight">
-<strong>💡 Did You Know?</strong> India's solar capacity grew 45x in just 10 years (2015–2025). At current growth rate, solar alone will cross 280 GW by 2030 — more than India's entire coal fleet today.
-</div>
-</div>
-
-<!-- CHAPTER 3 -->
-<div class="chapter">
-<h2><span class="chapter-num">3</span> Power Generation & Load Factors</h2>
-<p>Total generation in FY24-25 was <strong>1,771.7 BU</strong>. Fossil fuels generate 71.9% despite having only 54% capacity — because coal runs 24/7 while solar/wind are intermittent.</p>
-
-<div class="stat-row">
-<div class="stat-box"><div class="val">1,274 BU</div><div class="lbl">Fossil (71.9%)</div></div>
-<div class="stat-box"><div class="val">497.7 BU</div><div class="lbl">Non-Fossil (28.1%)</div></div>
-<div class="stat-box"><div class="val">67.2%</div><div class="lbl">Coal's Gen Share</div></div>
-</div>
-
-<h3>Generation by Source</h3>
-<table>
-<tr><th>Source</th><th>Generation (BU)</th><th>Share</th><th>PLF/CUF</th><th>Interpretation</th></tr>
-<tr><td>Coal</td><td>1,189.7</td><td>67.2%</td><td>64.2%</td><td>Base load — runs 24/7</td></tr>
-<tr><td>Large Hydro</td><td>158.3</td><td>8.9%</td><td>38.4%</td><td>Monsoon dependent</td></tr>
-<tr><td>Solar</td><td>140.4</td><td>7.9%</td><td>18.2%</td><td>Daylight only (5-6 hrs)</td></tr>
-<tr><td>Wind</td><td>87.9</td><td>5.0%</td><td>21.5%</td><td>Seasonal (Jun-Sep peak)</td></tr>
-<tr><td>Nuclear</td><td>56.3</td><td>3.2%</td><td>78.6%</td><td>Highest efficiency</td></tr>
-<tr><td>Gas</td><td>49.7</td><td>2.8%</td><td>22.8%</td><td>Peak load only (expensive)</td></tr>
-<tr><td>Biomass</td><td>42.1</td><td>2.4%</td><td>42.1%</td><td>Harvest dependent</td></tr>
-<tr><td>Lignite</td><td>34.5</td><td>1.9%</td><td>58.4%</td><td>Regional (TN, Rajasthan)</td></tr>
-<tr><td>Small Hydro</td><td>12.7</td><td>0.7%</td><td>28.6%</td><td>Run-of-river, variable</td></tr>
-</table>
-
-<h3>The Capacity vs Generation Gap</h3>
-<p>This is the most important concept in power sector analysis. Coal has 47% of capacity but produces 67% of electricity because it runs at 64% PLF. Solar has 20% of capacity but only 8% of generation because CUF is just 18% (daylight constraint).</p>
-
-<div class="insight">
-<strong>💡 Why Coal Still Matters:</strong> Even as India adds 50+ GW of solar/wind annually, coal remains indispensable for nighttime/cloudy base load. Battery Energy Storage (BESS) at scale is the only way to displace coal — India targets 5 GW BESS by 2027.
-</div>
-</div>
-
-<!-- CHAPTER 4 -->
-<div class="chapter">
-<h2><span class="chapter-num">4</span> Ownership Structure</h2>
-<p>India's power sector has three ownership categories. The private sector dominates with 53.5% — a dramatic shift from 100% government ownership before 1991.</p>
-
-<table>
-<tr><th>Ownership</th><th>Key Players</th><th>Capacity (GW)</th><th>Share</th><th>Gen (BU)</th><th>Fossil:RE</th></tr>
-<tr><td><strong>Central PSU</strong></td><td>NTPC, NHPC, NPCIL, SJVN</td><td>103.45</td><td>23.0%</td><td>420.5</td><td>53:47</td></tr>
-<tr><td><strong>State PSU</strong></td><td>MAHAGENCO, GSECL, DVC</td><td>105.82</td><td>23.5%</td><td>438.2</td><td>68:32</td></tr>
-<tr><td><strong>Private</strong></td><td>Adani, Tata, ReNew, JSW</td><td>241.02</td><td>53.5%</td><td>893.7</td><td>48:52</td></tr>
-<tr class="highlight-row"><td><strong>TOTAL</strong></td><td></td><td><strong>450.29</strong></td><td><strong>100%</strong></td><td><strong>1,752.4</strong></td><td></td></tr>
-</table>
-
-<h3>Key Ownership Insights</h3>
-<ul style="margin:10px 0 15px 20px;">
-<li>Private sector owns <strong>79% of solar</strong> and <strong>91% of wind</strong> — driving India's clean energy transition</li>
-<li>NTPC (Central PSU) is the single largest generator at 73 GW — larger than many countries</li>
-<li>Nuclear is exclusively Central PSU (government) — 8.18 GW via NPCIL</li>
-<li>State PSU remains the most fossil-dependent at 68% thermal</li>
-<li>Private sector crossed 50% non-fossil for the first time in 2024</li>
-</ul>
-
-<div class="insight">
-<strong>💡 Transition Story:</strong> In 1991, India opened electricity to private investment. Today, private companies own more than both PSU categories combined. AGEL (Adani Green) alone has 20 GW — more than many state utilities.
-</div>
-</div>
-
-<!-- CHAPTER 5 -->
-<div class="chapter">
-<h2><span class="chapter-num">5</span> Growth Timeline (1975–2025)</h2>
-<p>India's power sector has grown <strong>22.5x in 50 years</strong>. The journey from 20 GW to 450 GW tells the story of India's industrialization, liberalization, and now the energy transition.</p>
-
-<table>
-<tr><th>Year</th><th>Total (GW)</th><th>Fossil (GW)</th><th>Non-Fossil (GW)</th><th>NF Share</th><th>Era</th></tr>
-<tr><td>1975</td><td>20.1</td><td>14.5</td><td>5.6</td><td>27.9%</td><td>State monopoly</td></tr>
-<tr><td>1990</td><td>63.6</td><td>48.4</td><td>15.2</td><td>23.9%</td><td>Pre-liberalization</td></tr>
-<tr><td>2000</td><td>101.6</td><td>77.2</td><td>24.4</td><td>24.0%</td><td>Private entry</td></tr>
-<tr><td>2005</td><td>132.3</td><td>98.4</td><td>33.9</td><td>25.6%</td><td>UMPP era</td></tr>
-<tr><td>2010</td><td>173.6</td><td>131.6</td><td>42.0</td><td>24.2%</td><td>Solar Mission</td></tr>
-<tr><td>2015</td><td>278.1</td><td>205.9</td><td>72.2</td><td>25.9%</td><td>RE push begins</td></tr>
-<tr><td>2017</td><td>326.9</td><td>225.6</td><td>101.3</td><td>31.0%</td><td>100 GW NF!</td></tr>
-<tr><td>2020</td><td>370.1</td><td>234.7</td><td>135.4</td><td>36.6%</td><td>COVID year</td></tr>
-<tr><td>2022</td><td>399.5</td><td>237.4</td><td>162.1</td><td>40.6%</td><td>40% NF achieved</td></tr>
-<tr class="highlight-row"><td>2025</td><td>450.3</td><td>243.9</td><td>206.4</td><td>45.8%</td><td>Current</td></tr>
-</table>
-
-<h3>Key Policy Milestones</h3>
-<table>
-<tr><th>Year</th><th>Milestone</th><th>Impact</th></tr>
-<tr><td>1991</td><td>Sector liberalization</td><td>Ended state monopoly, allowed private IPPs</td></tr>
-<tr><td>2003</td><td>Electricity Act</td><td>Deregulation, open access, power trading</td></tr>
-<tr><td>2010</td><td>National Solar Mission</td><td>Target 20 GW by 2022 (later revised to 100 GW)</td></tr>
-<tr><td>2015</td><td>COP21 Paris</td><td>India pledged 175 GW RE</td></tr>
-<tr><td>2020</td><td>500 GW target announced</td><td>Tripled ambition for non-fossil</td></tr>
-<tr><td>2021</td><td>COP26 Net Zero</td><td>Net Zero by 2070 commitment</td></tr>
-<tr><td>2023</td><td>Green Hydrogen Mission</td><td>5 MMT H2 production by 2030</td></tr>
-</table>
-</div>
-
-<!-- CHAPTER 6 -->
-<div class="chapter">
-<h2><span class="chapter-num">6</span> Future Projections (2026–2032)</h2>
-<p>India is projected to nearly double its power capacity to 800 GW by 2032, with 75%+ of new additions from solar and wind.</p>
-
-<table>
-<tr><th>Year</th><th>Projected Capacity (GW)</th><th>Demand (BU)</th><th>Key Driver</th></tr>
-<tr><td>2026</td><td>~490</td><td>1,880</td><td>30+ GW solar/year additions</td></tr>
-<tr><td>2027</td><td>~540</td><td>1,980</td><td>Offshore wind tenders, BESS pilots</td></tr>
-<tr><td>2028</td><td>~590</td><td>2,090</td><td>BESS at scale, coal plateau</td></tr>
-<tr><td>2030</td><td>~680</td><td>2,320</td><td>500 GW non-fossil target deadline</td></tr>
-<tr><td>2032</td><td>~800</td><td>2,580</td><td>India becomes 2nd largest power market</td></tr>
-</table>
-
-<h3>What Gets Added (2025–2030)</h3>
-<table>
-<tr><th>Source</th><th>Planned Addition</th><th>Key Notes</th></tr>
-<tr><td>☀️ Solar</td><td>+180 GW</td><td>35+ GW/year; domestic manufacturing ramp-up</td></tr>
-<tr><td>🌬️ Wind</td><td>+50 GW</td><td>Onshore + 4 GW offshore (Gujarat coast)</td></tr>
-<tr><td>🔋 BESS</td><td>+20 GW</td><td>Critical for solar integration post-sunset</td></tr>
-<tr><td>⚛️ Nuclear</td><td>+8 GW</td><td>10 new reactors under construction</td></tr>
-<tr><td>🏭 Coal</td><td>+10 GW</td><td>Only projects already under construction</td></tr>
-</table>
-
-<div class="insight">
-<strong>💡 The Crossover:</strong> By 2028, non-fossil capacity will exceed fossil for the first time in India's history. Fossil capacity plateaus at ~245 GW while all net additions are renewable.
-</div>
-</div>
-
-<!-- CHAPTER 7 -->
-<div class="chapter">
-<h2><span class="chapter-num">7</span> Market Players — RE Leaders</h2>
-<p>India's renewable market is dominated by aggressive private companies. Total RE capacity reached <strong>236.5 GW</strong> (Jun 2026, MNRE). AGEL became the first company globally to reach 20 GW through greenfield development.</p>
-
-<table>
-<tr><th>Rank</th><th>Company</th><th>RE (MW)</th><th>Solar</th><th>Wind</th><th>Share</th><th>Type</th></tr>
-<tr><td>1</td><td><strong>Adani Green (AGEL)</strong></td><td>20,000</td><td>13,500</td><td>5,500</td><td>8.5%</td><td>Private/BSE</td></tr>
-<tr><td>2</td><td><strong>ReNew Energy</strong></td><td>11,000</td><td>5,500</td><td>5,500</td><td>4.7%</td><td>Private/NASDAQ</td></tr>
-<tr><td>3</td><td><strong>Greenko Group</strong></td><td>9,200</td><td>4,200</td><td>3,500</td><td>3.9%</td><td>Private (GIC)</td></tr>
-<tr><td>4</td><td><strong>Tata Power RE</strong></td><td>6,700</td><td>4,200</td><td>2,500</td><td>2.8%</td><td>Private/BSE</td></tr>
-<tr><td>5</td><td><strong>JSW Energy</strong></td><td>5,800</td><td>3,200</td><td>2,600</td><td>2.5%</td><td>Private/BSE</td></tr>
-<tr><td>6</td><td>NTPC RE Ltd</td><td>5,200</td><td>3,800</td><td>1,400</td><td>2.2%</td><td>Central PSU</td></tr>
-<tr><td>7</td><td>Sembcorp India</td><td>4,800</td><td>2,800</td><td>2,000</td><td>2.0%</td><td>Private (Temasek)</td></tr>
-<tr><td>8</td><td>Avaada Energy</td><td>4,500</td><td>4,500</td><td>—</td><td>1.9%</td><td>Private</td></tr>
-<tr><td>9</td><td>Azure Power</td><td>4,200</td><td>4,200</td><td>—</td><td>1.8%</td><td>Private (Omers)</td></tr>
-<tr><td>10</td><td>Hero Future Energies</td><td>3,800</td><td>2,200</td><td>1,600</td><td>1.6%</td><td>Private</td></tr>
-</table>
-
-<div class="insight">
-<strong>💡 Market Dynamics:</strong> Top 5 control 52.7 GW (22% of RE). NTPC RE is the fastest-growing PSU with 60 GW target by 2032. Foreign sovereign wealth funds (GIC Singapore, ADIA, Temasek) have invested heavily in Indian RE.
-</div>
-</div>
-
-<!-- CHAPTER 8 -->
-<div class="chapter">
-<h2><span class="chapter-num">8</span> State-wise Distribution</h2>
-<p>India's power capacity is concentrated in industrialized and resource-rich states. Maharashtra leads overall, while Rajasthan dominates solar and Tamil Nadu leads wind.</p>
-
-<table>
-<tr><th>Rank</th><th>State</th><th>Total (GW)</th><th>Dominant Source</th><th>Key Feature</th></tr>
-<tr><td>1</td><td>Maharashtra</td><td>52.1</td><td>Coal</td><td>Largest industrial consumer</td></tr>
-<tr><td>2</td><td>Gujarat</td><td>46.8</td><td>Coal + Solar</td><td>Kutch wind corridor, Charanka solar</td></tr>
-<tr><td>3</td><td>Rajasthan</td><td>41.5</td><td>Solar</td><td>Bhadla — world's largest solar park</td></tr>
-<tr><td>4</td><td>Tamil Nadu</td><td>38.9</td><td>Wind</td><td>Muppandal — Asia's largest wind farm</td></tr>
-<tr><td>5</td><td>Karnataka</td><td>34.2</td><td>Solar</td><td>Pavagada Ultra Mega Solar Park</td></tr>
-<tr><td>6</td><td>Uttar Pradesh</td><td>32.6</td><td>Coal</td><td>Largest population, growing demand</td></tr>
-<tr><td>7</td><td>Andhra Pradesh</td><td>28.4</td><td>Solar</td><td>Kurnool Ultra Mega Solar Park</td></tr>
-<tr><td>8</td><td>Madhya Pradesh</td><td>26.8</td><td>Coal</td><td>Rewa solar — PM Modi's showcase</td></tr>
-</table>
-
-<h3>Regional Energy Belts</h3>
-<ul style="margin:10px 0 15px 20px;">
-<li><strong>Coal Belt:</strong> Maharashtra, Gujarat, UP, MP, Chhattisgarh, Odisha, West Bengal (~280 GW combined)</li>
-<li><strong>Solar Belt:</strong> Rajasthan, Gujarat, Karnataka, AP, Tamil Nadu (highest irradiance 5.5+ kWh/m²/day)</li>
-<li><strong>Wind Corridor:</strong> Tamil Nadu coast, Gujarat Kutch, Rajasthan Jaisalmer, Karnataka hills</li>
-<li><strong>Hydro Belt:</strong> Himachal Pradesh, Uttarakhand, J&K, Sikkim, Arunachal (Himalayan rivers)</li>
-</ul>
-</div>
-
-<!-- CHAPTER 9 -->
-<div class="chapter">
-<h2><span class="chapter-num">9</span> Risk Analysis (ISO 31000 Framework)</h2>
-<p>Power sector assets face significant risks from natural disasters, equipment failure, and operational hazards. This chapter provides a comprehensive risk assessment using the ISO 31000 framework.</p>
-
-<h3>9.1 Act of God (AOG) Risks</h3>
-<table>
-<tr><th>Risk</th><th>Probability</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments</th><th>Mitigation</th></tr>
-<tr><td>Cyclone/Storm</td><td>Medium</td><td>Very High</td><td>50–200</td><td>Wind, Solar</td><td>Cyclone-rated design, stow protocols</td></tr>
-<tr><td>Flood</td><td>Medium</td><td>High</td><td>20–100</td><td>Coal, Solar</td><td>Elevated foundations, drainage</td></tr>
-<tr><td>Earthquake</td><td>Low</td><td>Very High</td><td>30–150</td><td>All</td><td>Seismic design (Zone IV/V)</td></tr>
-<tr><td>Lightning</td><td>High</td><td>Medium</td><td>5–30</td><td>Wind, Solar</td><td>IEC 62305 LPS, surge protection</td></tr>
-<tr><td>Hailstorm</td><td>Medium</td><td>High</td><td>10–50</td><td>Solar</td><td>Glass-glass modules, tilt-to-stow</td></tr>
-</table>
-
-<h3>9.2 Non-AOG (Operational) Risks</h3>
-<table>
-<tr><th>Risk</th><th>Probability</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments</th><th>Mitigation</th></tr>
-<tr><td>Boiler Tube Failure</td><td>High</td><td>High</td><td>20–80</td><td>Coal</td><td>NDT, water chemistry, AI prediction</td></tr>
-<tr><td>Turbine Blade Failure</td><td>Medium</td><td>High</td><td>20–80</td><td>Wind</td><td>CMS, drone inspections</td></tr>
-<tr><td>Transformer Failure</td><td>Medium</td><td>High</td><td>15–60</td><td>All</td><td>DGA oil analysis, online monitoring</td></tr>
-<tr><td>Fire (Electrical/Coal)</td><td>Medium</td><td>High</td><td>10–100</td><td>Coal, Solar</td><td>Detection + suppression systems</td></tr>
-<tr><td>Panel Hotspot/PID</td><td>High</td><td>Medium</td><td>5–20</td><td>Solar</td><td>Drone thermal imaging, IV testing</td></tr>
-<tr><td>Gearbox Failure</td><td>Medium</td><td>High</td><td>15–50</td><td>Wind</td><td>Oil analysis, vibration trending</td></tr>
-</table>
-
-<h3>9.3 Case Studies — Claims Learnings</h3>
-<table>
-<tr><th>Incident</th><th>Year</th><th>Loss (₹ Cr)</th><th>Key Learning</th></tr>
-<tr><td>Cyclone Tauktae — Gujarat Wind</td><td>2021</td><td>180</td><td>Cyclone-rated towers essential for coast</td></tr>
-<tr><td>Ramagundam Boiler Explosion</td><td>2022</td><td>95</td><td>NDT frequency must increase after 15 yrs</td></tr>
-<tr><td>Rajasthan Solar Hailstorm</td><td>2023</td><td>45</td><td>Glass-glass panels survive; backsheet doesn't</td></tr>
-<tr><td>Tamil Nadu Wind Lightning</td><td>2022</td><td>28</td><td>LPS upgrade ROI = 3 years</td></tr>
-<tr><td>Mundra Coal Handling Fire</td><td>2020</td><td>120</td><td>Coal dust suppression is non-negotiable</td></tr>
-</table>
-
-<h3>9.4 Best Practices by Segment</h3>
-<p><strong>Coal:</strong> Predictive maintenance (AI/ML), NDT every 2 years after 15-year mark, coal quality analyzers, boiler water chemistry control, fire suppression barriers.</p>
-<p><strong>Wind:</strong> Condition Monitoring Systems (CMS), IEC 62305 Lightning Protection, blade inspection (drone/rope), structural health monitoring, cyclone stow protocols.</p>
-<p><strong>Solar:</strong> Quarterly drone thermal imaging, string-level IV curve testing, tracker actuator maintenance, hail-resistant module procurement, inverter N+1 redundancy.</p>
-</div>
-
-<!-- CHAPTER 10 -->
-<div class="chapter">
-<h2><span class="chapter-num">10</span> Emerging Technologies</h2>
-<p>New technologies are reshaping India's power landscape, creating both opportunities and new risk profiles for insurers.</p>
-
-<table>
-<tr><th>Technology</th><th>Status</th><th>Capacity/Target</th><th>Risk Profile</th></tr>
-<tr><td>Battery Storage (BESS)</td><td>Early deployment</td><td>5 GW by 2027</td><td>Thermal runaway, fire, degradation</td></tr>
-<tr><td>Green Hydrogen</td><td>Pilot stage</td><td>5 MMT by 2030</td><td>Explosion, electrolyzer failure</td></tr>
-<tr><td>Offshore Wind</td><td>Tenders issued</td><td>4 GW by 2030</td><td>Marine corrosion, cable damage</td></tr>
-<tr><td>Floating Solar</td><td>1.2 GW operational</td><td>10 GW by 2030</td><td>Anchor failure, water ingress</td></tr>
-<tr><td>Carbon Capture (CCS)</td><td>R&D / demo</td><td>Pilot plants</td><td>Chemical handling, pressure vessels</td></tr>
-<tr><td>Pumped Hydro Storage</td><td>Under construction</td><td>27 GW planned</td><td>Geological risks, dam safety</td></tr>
-<tr><td>Small Modular Reactors</td><td>Policy stage</td><td>TBD</td><td>Nuclear risks at smaller scale</td></tr>
-</table>
-
-<div class="insight">
-<strong>💡 Insurance Implication:</strong> These technologies have limited or no loss history — making traditional actuarial pricing impossible. First-mover insurers who develop expertise in BESS, offshore wind, and H2 will capture a greenfield premium pool.
-</div>
-</div>
-
-<!-- CHAPTER 11 -->
-<div class="chapter">
-<h2><span class="chapter-num">11</span> Insurance Market Opportunity</h2>
-<p>India's power sector insurance market is estimated at <strong>₹8,000–10,000 Cr annual premium</strong> and growing 15–20% annually driven by 50+ GW capacity additions per year.</p>
-
-<h3>Insurance Products for Power Sector</h3>
-<table>
-<tr><th>Product</th><th>Covers</th><th>Typical Premium Range</th><th>Growth Outlook</th></tr>
-<tr><td>CAR/EAR</td><td>Construction-phase damage</td><td>0.15–0.30% of project cost</td><td>High (50 GW/yr additions)</td></tr>
-<tr><td>Material Damage (MD)</td><td>Operational asset damage</td><td>0.05–0.15% of asset value</td><td>Steady</td></tr>
-<tr><td>MLOP / BI</td><td>Revenue loss during repair</td><td>0.10–0.25% of annual revenue</td><td>High (often exceeds MD)</td></tr>
-<tr><td>BESS Fire Cover</td><td>Battery thermal runaway</td><td>Being developed</td><td>Very High (new market)</td></tr>
-<tr><td>Marine (Offshore Wind)</td><td>Subsea cables, installation</td><td>Specialist pricing</td><td>New opportunity</td></tr>
-<tr><td>Parametric Weather</td><td>Wind/solar shortfall triggers</td><td>Innovative product</td><td>Growing</td></tr>
-</table>
-
-<h3>Key Insurance Insights</h3>
-<ul style="margin:10px 0 15px 20px;">
-<li>Business Interruption claims often <strong>2-3x larger</strong> than Material Damage claims</li>
-<li>Wind turbine crane availability in India: 3-6 months wait — extends BI significantly</li>
-<li>Solar hailstorm emerged as #1 peril post-2020 (can damage 80% of modules in minutes)</li>
-<li>Coal plant boiler failures have longest lead time: 12-18 months for turbine rotor replacement</li>
-<li>Pre-agreed repair protocols in policy wording reduce claims settlement time by 60%</li>
-</ul>
-
-<div class="insight">
-<strong>💡 The Opportunity:</strong> With India adding ₹5-6 lakh crore of power assets annually (2025–2030), the construction + operational insurance premium pool will double within 5 years. Specialized underwriting for BESS, offshore wind, and green H2 represents a first-mover advantage.
-</div>
-</div>
-
-<!-- CHAPTER 12 -->
-<div class="chapter">
-<h2><span class="chapter-num">12</span> Data Sources & References</h2>
-<table>
-<tr><th>Source</th><th>Data Used</th><th>URL</th></tr>
-<tr><td>Central Electricity Authority</td><td>Capacity, generation, PLF/CUF</td><td>cea.nic.in</td></tr>
-<tr><td>MNRE</td><td>RE capacity, physical progress</td><td>mnre.gov.in</td></tr>
-<tr><td>Ministry of Power</td><td>Policy, projections, demand</td><td>powermin.gov.in</td></tr>
-<tr><td>National Power Portal</td><td>Real-time data, state-wise</td><td>npp.gov.in</td></tr>
-<tr><td>Company Annual Reports</td><td>Market players, financial data</td><td>BSE/NSE filings</td></tr>
-<tr><td>ISO 31000:2018</td><td>Risk management framework</td><td>International standard</td></tr>
-<tr><td>IEC 62305</td><td>Lightning protection standard</td><td>International standard</td></tr>
-</table>
-
-<div style="margin-top:20px; padding:15px; background:#f0f4f8; border-radius:8px;">
-<p style="font-size:12px; color:#555;">
-<strong>Disclaimer:</strong> Base data is as of March 2025 (FY24-25). Updated figures from MNRE June 2026 mentioned where applicable. Company data from latest available annual reports. Risk analysis case studies based on publicly reported incidents. This eBook is for internal reference and educational purposes only.
+<div style="margin-top:30px; padding:15px; background:#f0f7fa; border-radius:8px; border:1px solid #b0d4e3;">
+<h4 style="font-size:12px; color:var(--navy); margin:0 0 8px 0; border:none; padding:0;">About This Report</h4>
+<p style="font-size:12px; color:#444; margin:0;">
+This report consolidates India's entire power sector intelligence into a single document — covering installed capacity, generation performance, ownership distribution, 50-year growth history, market players, geographic distribution, comprehensive risk analysis (ISO 31000), emerging technologies, and detailed insurance market sizing. All data is sourced from official government portals (CEA, MNRE, Power Ministry) and verified company filings. This report is prepared for the Power & Energy Practice team and senior management of ICICI Lombard GIC Ltd.
 </p>
 </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ==================== CHAPTER 1 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 1</span></div>
+<h2><span class="chapter-num">1</span> Executive Summary & Industry Overview</h2>
+
+<p>India operates the <strong>world's 3rd largest electricity system</strong> — behind only China and the United States. With 450.29 GW of installed capacity serving 1.4 billion people across 36 states and union territories, the power sector is the backbone of India's $3.7 trillion economy.</p>
+
+<p>The sector has undergone a remarkable <strong>22.5x transformation</strong> — from just 20 GW at independence's silver jubilee (1975) to over 450 GW today. More significantly, the energy transition is now in full swing: non-fossil sources have grown from 24% (2000) to 45.8% (2025), and are on track to surpass fossil fuel capacity by 2028.</p>
+
+<div class="stat-row">
+<div class="stat-box"><div class="val">450.29 GW</div><div class="lbl">Total Installed Capacity</div></div>
+<div class="stat-box"><div class="val">1,771.7 BU</div><div class="lbl">Annual Generation FY25</div></div>
+<div class="stat-box"><div class="val">45.8%</div><div class="lbl">Non-Fossil Capacity Share</div></div>
+<div class="stat-box"><div class="val">₹8,000-10,000 Cr</div><div class="lbl">Annual Insurance Premium Pool</div></div>
+</div>
+
+<h3>Strategic Significance for ICICI Lombard</h3>
+<p>The power sector represents one of the largest insurable asset pools in India. With annual capacity additions of 40-50 GW (translating to ₹5-6 lakh crore in new asset creation annually), both construction-phase (CAR/EAR) and operational (Material Damage + MLOP) insurance segments are growing at 15-20% CAGR. Understanding the sector's structure, risks, and trajectory is essential for:</p>
+<ul>
+<li><strong>Underwriting excellence</strong> — risk-appropriate pricing for coal, wind, solar, and emerging technologies</li>
+<li><strong>Portfolio optimization</strong> — balanced exposure across fossil and non-fossil segments</li>
+<li><strong>New product development</strong> — BESS fire cover, parametric weather, offshore marine</li>
+<li><strong>Claims management</strong> — understanding failure modes, repair timelines, and BI implications</li>
+<li><strong>Client advisory</strong> — risk engineering recommendations based on best practices</li>
+</ul>
+
+<h3>Key Structural Facts</h3>
+<table>
+<tr><th>Parameter</th><th>Value</th><th>Context</th></tr>
+<tr><td>Total Installed Capacity</td><td>450.29 GW</td><td>3rd largest globally (after China 2,900 GW, USA 1,300 GW)</td></tr>
+<tr><td>Annual Generation</td><td>1,771.7 BU</td><td>5% YoY growth; peak demand 250 GW (summer 2025)</td></tr>
+<tr><td>Fossil Share</td><td>54.2% (243.87 GW)</td><td>Plateauing — net new coal additions near zero</td></tr>
+<tr><td>Non-Fossil Share</td><td>45.8% (206.42 GW)</td><td>Doubling every 5-6 years; target 500 GW by 2030</td></tr>
+<tr><td>Private Sector Share</td><td>53.5% (241.02 GW)</td><td>Drives 85%+ of all new renewable additions</td></tr>
+<tr><td>Number of Power Plants</td><td>~4,500+</td><td>From 500 MW super-critical to 1 MW rooftop</td></tr>
+<tr><td>Grid Connectivity</td><td>One Nation One Grid</td><td>5 regional grids synchronized since 2013</td></tr>
+<tr><td>Per Capita Consumption</td><td>~1,250 kWh/year</td><td>Well below world average (3,500 kWh) — growth headroom</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Insurance Implication:</strong> At current growth trajectory, India will add assets worth ₹25-30 lakh crore between 2025-2030. This represents an incremental insurance premium opportunity of ₹4,000-5,000 Cr over the next 5 years — making power sector one of the fastest growing segments in commercial insurance.
+</div>
+
+<h3>India's International Commitments</h3>
+<ul>
+<li><strong>COP21 Paris (2015):</strong> 175 GW renewable energy by 2022 — achieved ahead of schedule</li>
+<li><strong>COP26 Glasgow (2021):</strong> 500 GW non-fossil capacity by 2030; 50% energy from renewables by 2030</li>
+<li><strong>Net Zero by 2070:</strong> Full decarbonization — longer timeline than Western nations (2050)</li>
+<li><strong>Green Hydrogen Mission (2023):</strong> 5 Million Metric Tonnes per annum by 2030</li>
+<li><strong>National Electricity Plan (2023):</strong> 900 GW total capacity required by 2032</li>
+</ul>
+
+<div class="key-point">
+<strong>🎯 Bottom Line:</strong> India's power sector is in the middle of the world's largest energy transition. The shift from coal-dominated to renewable-first creates entirely new risk profiles, asset classes, and insurance product opportunities that ICICI Lombard must proactively address.
+</div>
+</div>
+
+<!-- ==================== CHAPTER 2 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 2</span></div>
+<h2><span class="chapter-num">2</span> Installed Capacity — Energy Mix & Source Breakdown</h2>
+
+<p>India's 450.29 GW installed capacity comprises 10 distinct energy sources across two broad categories. Understanding this mix is fundamental to risk assessment — each source has unique failure modes, peril exposures, and insurance considerations.</p>
+
+<div class="bar-row">
+<div class="bar-seg" style="width:54.2%;background:var(--maroon);">🔥 Fossil — 243.87 GW (54.2%)</div>
+<div class="bar-seg" style="width:45.8%;background:var(--navy);">🌿 Non-Fossil — 206.42 GW (45.8%)</div>
+</div>
+
+<h3>Complete Source-wise Breakdown</h3>
+<table>
+<tr><th>#</th><th>Energy Source</th><th>Category</th><th>Capacity (MW)</th><th>National Share</th><th>Key Insurance Risk</th></tr>
+<tr><td>1</td><td><strong>Coal</strong></td><td>Fossil</td><td>2,11,540</td><td>47.0%</td><td>Boiler explosion, turbine failure</td></tr>
+<tr><td>2</td><td><strong>Solar</strong></td><td>Non-Fossil</td><td>90,570</td><td>20.1%</td><td>Hailstorm, inverter fire, PID</td></tr>
+<tr><td>3</td><td><strong>Wind</strong></td><td>Non-Fossil</td><td>47,650</td><td>10.6%</td><td>Cyclone, blade failure, lightning</td></tr>
+<tr><td>4</td><td><strong>Large Hydro</strong></td><td>Non-Fossil</td><td>47,050</td><td>10.4%</td><td>Flood, silt damage, gate failure</td></tr>
+<tr><td>5</td><td><strong>Natural Gas</strong></td><td>Fossil</td><td>24,900</td><td>5.5%</td><td>Turbine trip, gas leak, fire</td></tr>
+<tr><td>6</td><td><strong>Biomass/Bagasse</strong></td><td>Non-Fossil</td><td>11,420</td><td>2.5%</td><td>Fire, boiler issues, fuel supply</td></tr>
+<tr><td>7</td><td><strong>Nuclear</strong></td><td>Non-Fossil</td><td>8,180</td><td>1.8%</td><td>Government insured (NPCIL)</td></tr>
+<tr><td>8</td><td><strong>Lignite</strong></td><td>Fossil</td><td>6,740</td><td>1.5%</td><td>Similar to coal + spontaneous combustion</td></tr>
+<tr><td>9</td><td><strong>Small Hydro</strong></td><td>Non-Fossil</td><td>5,050</td><td>1.1%</td><td>Flash flood, penstock burst</td></tr>
+<tr><td>10</td><td><strong>Diesel</strong></td><td>Fossil</td><td>690</td><td>0.2%</td><td>Being decommissioned</td></tr>
+<tr class="highlight-row"><td></td><td><strong>TOTAL</strong></td><td></td><td><strong>4,50,290</strong></td><td><strong>100%</strong></td><td></td></tr>
+</table>
+
+<h3>Solar Energy — The Growth Engine</h3>
+<p>Solar has grown from virtually zero in 2010 to 90.6 GW by March 2025 — the fastest capacity addition in India's energy history. Key facts:</p>
+<ul>
+<li><strong>Tariff decline:</strong> From ₹17/kWh (2010) to ₹1.99/kWh (2024) — an 88% reduction</li>
+<li><strong>Sub-segments:</strong> Utility-scale ground mount (75%), Rooftop (20%), Floating (5%)</li>
+<li><strong>Technology:</strong> Mono-PERC dominant; Bifacial and TOPCon gaining share</li>
+<li><strong>Domestic manufacturing:</strong> PLI scheme driving local production (reduce China dependency)</li>
+<li><strong>Major parks:</strong> Bhadla (2,245 MW), Pavagada (2,050 MW), Kurnool (1,000 MW)</li>
+<li><strong>MNRE Jun 2026 update:</strong> Solar has crossed 162 GW (rapid additions in FY26)</li>
+</ul>
+
+<h3>Wind Energy — The Pioneer</h3>
+<p>India was an early wind adopter (1990s) and has the world's 4th largest installed wind capacity:</p>
+<ul>
+<li><strong>Turbine evolution:</strong> 250 kW (1990s) → 2 MW (2010s) → 3.5-5.5 MW (2025)</li>
+<li><strong>Hub heights:</strong> Increased from 50m to 120-160m — accessing stronger, steadier winds</li>
+<li><strong>Repowering opportunity:</strong> 10+ GW of old turbines (<1 MW) eligible for 3-5x capacity upgrade</li>
+<li><strong>Offshore:</strong> First 4 GW tenders issued for Gujarat coast (deeper water, higher wind)</li>
+<li><strong>Key corridors:</strong> Muppandal (TN), Kutch (GJ), Jaisalmer (RJ), Chitradurga (KA)</li>
+<li><strong>MNRE Jun 2026 update:</strong> Wind at 57.4 GW</li>
+</ul>
+
+<h3>Coal — Still the Backbone</h3>
+<p>Despite the renewable push, coal remains India's primary generation source (67% of actual electricity). Understanding coal plant risks is critical for ICICI Lombard's portfolio:</p>
+<ul>
+<li><strong>Fleet age:</strong> ~40% of coal plants are 25+ years old — higher failure probability</li>
+<li><strong>Super-critical technology:</strong> 50% of new plants; higher efficiency but complex maintenance</li>
+<li><strong>Key operators:</strong> NTPC (48 GW coal), Adani Power (16 GW), Tata Power (8 GW)</li>
+<li><strong>No new coal after 2030:</strong> Only plants under construction will be completed</li>
+<li><strong>Stranded asset risk:</strong> 30-40 GW may become uneconomical by 2035 (carbon pricing risk)</li>
+</ul>
+
+<div class="insight">
+<strong>💡 Underwriting Note:</strong> Solar and Wind now represent 50%+ of new policy originations in power sector. However, coal still dominates the existing portfolio (higher sum insured per MW). The transition from coal to RE requires recalibrating loss assumptions — RE has higher frequency but lower severity per event compared to thermal.
+</div>
+</div>
+
+<!-- ==================== CHAPTER 3 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 3</span></div>
+<h2><span class="chapter-num">3</span> Power Generation, Load Factors & Efficiency Analysis</h2>
+
+<p>Total electricity generation in FY24-25 reached <strong>1,771.7 Billion Units (BU)</strong>. The critical insight for insurance professionals: installed capacity ≠ actual generation. The load factor (PLF for thermal, CUF for renewable) determines how much electricity each MW actually produces — and directly impacts Business Interruption (BI) claim calculations.</p>
+
+<div class="stat-row">
+<div class="stat-box"><div class="val">1,274 BU</div><div class="lbl">Fossil Generation (71.9%)</div></div>
+<div class="stat-box"><div class="val">497.7 BU</div><div class="lbl">Non-Fossil Generation (28.1%)</div></div>
+<div class="stat-box"><div class="val">64.2%</div><div class="lbl">Coal PLF (Base Load)</div></div>
+<div class="stat-box"><div class="val">18.2%</div><div class="lbl">Solar CUF (Daylight Only)</div></div>
+</div>
+
+<h3>Generation & Load Factor — Complete Analysis</h3>
+<table>
+<tr><th>Source</th><th>Generation (BU)</th><th>Gen Share</th><th>PLF/CUF</th><th>Capacity Share</th><th>Gap</th><th>BI Implication</th></tr>
+<tr><td>Coal</td><td>1,189.7</td><td>67.2%</td><td>64.2%</td><td>47.0%</td><td>+20.2pp</td><td>Highest BI per MW (runs 24/7)</td></tr>
+<tr><td>Large Hydro</td><td>158.3</td><td>8.9%</td><td>38.4%</td><td>10.4%</td><td>-1.5pp</td><td>Seasonal BI (monsoon generation)</td></tr>
+<tr><td>Solar</td><td>140.4</td><td>7.9%</td><td>18.2%</td><td>20.1%</td><td>-12.2pp</td><td>Low BI per MW (daylight only)</td></tr>
+<tr><td>Wind</td><td>87.9</td><td>5.0%</td><td>21.5%</td><td>10.6%</td><td>-5.6pp</td><td>Seasonal BI (monsoon peak)</td></tr>
+<tr><td>Nuclear</td><td>56.3</td><td>3.2%</td><td>78.6%</td><td>1.8%</td><td>+1.4pp</td><td>Highest efficiency (Govt insured)</td></tr>
+<tr><td>Gas</td><td>49.7</td><td>2.8%</td><td>22.8%</td><td>5.5%</td><td>-2.7pp</td><td>Low utilization (expensive fuel)</td></tr>
+<tr><td>Biomass</td><td>42.1</td><td>2.4%</td><td>42.1%</td><td>2.5%</td><td>-0.1pp</td><td>Harvest-cycle dependent</td></tr>
+<tr><td>Lignite</td><td>34.5</td><td>1.9%</td><td>58.4%</td><td>1.5%</td><td>+0.4pp</td><td>Regional base load (TN, RJ)</td></tr>
+<tr><td>Small Hydro</td><td>12.7</td><td>0.7%</td><td>28.6%</td><td>1.1%</td><td>-0.4pp</td><td>Run-of-river, highly variable</td></tr>
+<tr><td>Diesel</td><td>0.1</td><td>~0%</td><td>1.2%</td><td>0.2%</td><td>—</td><td>Nearly decommissioned</td></tr>
+</table>
+
+<h3>Why This Matters for Insurance</h3>
+<p>The capacity vs generation gap has direct implications for <strong>Machinery Loss of Profit (MLOP)</strong> calculations:</p>
+<ul>
+<li><strong>Coal (PLF 64%):</strong> A 500 MW unit generates ~2,800 MU/year at ₹4/kWh = ₹1,120 Cr revenue/year. A 6-month outage = ₹560 Cr MLOP claim.</li>
+<li><strong>Solar (CUF 18%):</strong> A 500 MW solar plant generates ~790 MU/year at ₹2.5/kWh = ₹198 Cr revenue/year. Same 6-month outage = ₹99 Cr MLOP claim.</li>
+<li><strong>Wind (CUF 21.5%):</strong> If outage occurs during peak season (Jun-Sep), BI impact is 3x higher than off-season.</li>
+</ul>
+
+<div class="key-point">
+<strong>🎯 Underwriting Principle:</strong> Always calculate MLOP exposure based on actual generation (PLF/CUF adjusted), not nameplate capacity. A 500 MW coal plant has 5-6x more BI exposure than a 500 MW solar plant despite same "capacity."
+</div>
+
+<h3>Coal PLF Trend — Declining Utilization</h3>
+<p>Coal PLF has declined from 78% (2007) to 64% (2025). This is not because coal plants are failing — it's because renewable energy has "must-run" priority on the grid. During daytime when solar floods the grid, coal plants are forced to back down (reduce generation). This creates a structural challenge: coal assets generate less revenue but still need full insurance coverage for the physical asset.</p>
+
+<div class="insight">
+<strong>💡 Emerging Concern:</strong> As RE penetration increases, coal plants will operate more in "cycling" mode (frequent start-stop). This increases thermal stress and boiler tube failure frequency by an estimated 15-20%. Underwriters should factor this into technical assessment.
+</div>
+</div>
+
+<!-- ==================== CHAPTER 4 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 4</span></div>
+<h2><span class="chapter-num">4</span> Ownership Structure & Key Stakeholders</h2>
+
+<p>Understanding ownership is critical for client segmentation, account management, and risk aggregation. The sector is divided into three distinct ownership categories, each with different risk appetites, insurance procurement behaviors, and decision-making structures.</p>
+
+<table>
+<tr><th>Ownership</th><th>Key Entities</th><th>Capacity (GW)</th><th>Share</th><th>Gen (BU)</th><th>Fossil:RE Ratio</th><th>Insurance Behavior</th></tr>
+<tr><td><strong>Central PSU</strong></td><td>NTPC, NHPC, NPCIL, SJVN, NLC, DVC</td><td>103.45</td><td>23.0%</td><td>420.5</td><td>53:47</td><td>Bulk tender, NIAC/national pools</td></tr>
+<tr><td><strong>State PSU</strong></td><td>MAHAGENCO, GSECL, TANGEDCO, KPCL</td><td>105.82</td><td>23.5%</td><td>438.2</td><td>68:32</td><td>State tenders, price-sensitive</td></tr>
+<tr><td><strong>Private Sector</strong></td><td>Adani, Tata, ReNew, JSW, Greenko</td><td>241.02</td><td>53.5%</td><td>893.7</td><td>48:52</td><td>Broker-placed, value cover</td></tr>
+<tr class="highlight-row"><td><strong>TOTAL</strong></td><td></td><td><strong>450.29</strong></td><td><strong>100%</strong></td><td><strong>1,752.4</strong></td><td></td><td></td></tr>
+</table>
+
+<h3>Source Mix by Ownership (MW)</h3>
+<table>
+<tr><th>Source</th><th>Central PSU</th><th>State PSU</th><th>Private</th><th>Total</th><th>Private %</th></tr>
+<tr><td>Coal</td><td>42,800</td><td>62,500</td><td>1,06,240</td><td>2,11,540</td><td>50%</td></tr>
+<tr><td>Solar</td><td>12,500</td><td>8,400</td><td>69,670</td><td>90,570</td><td>77%</td></tr>
+<tr><td>Wind</td><td>2,100</td><td>3,200</td><td>42,350</td><td>47,650</td><td>89%</td></tr>
+<tr><td>Large Hydro</td><td>21,200</td><td>18,200</td><td>7,650</td><td>47,050</td><td>16%</td></tr>
+<tr><td>Gas</td><td>7,100</td><td>5,800</td><td>12,000</td><td>24,900</td><td>48%</td></tr>
+<tr><td>Nuclear</td><td>8,180</td><td>—</td><td>—</td><td>8,180</td><td>0%</td></tr>
+</table>
+
+<h3>ICICI Lombard Account Strategy Implications</h3>
+<ul>
+<li><strong>NTPC (73 GW):</strong> Single largest insurable entity. Multiple policies across 50+ locations. Premium potential: ₹200-300 Cr/year</li>
+<li><strong>Adani Group (40+ GW across Green + Power):</strong> Fastest growing. Aggressive capacity additions. High premium growth potential</li>
+<li><strong>ReNew / Greenko / JSW:</strong> Pure RE players — growing 3-5 GW/year. Portfolio approach preferred</li>
+<li><strong>State Gencos:</strong> Price-sensitive but large exposure. Often under-insured. Risk engineering opportunity</li>
+</ul>
+
+<div class="insight">
+<strong>💡 Key Insight:</strong> Private sector owns 89% of wind and 77% of solar but only 50% of coal. This means the private insurance market (broker-driven, value-based) is growing faster than PSU tender market. ICICI Lombard's broker relationships and specialized underwriting capability are competitive advantages.
+</div>
+</div>
+
+<!-- ==================== CHAPTERS 5-6 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 5</span></div>
+<h2><span class="chapter-num">5</span> Historical Growth Journey (1975–2025)</h2>
+
+<p>India's power sector growth mirrors its economic development — from a state-controlled, capacity-starved system to a liberalized, surplus-capable grid. Each phase brought distinct insurance implications.</p>
+
+<table>
+<tr><th>Year</th><th>Total (GW)</th><th>Fossil</th><th>Non-Fossil</th><th>NF %</th><th>Era</th><th>Insurance Context</th></tr>
+<tr><td>1975</td><td>20.1</td><td>14.5</td><td>5.6</td><td>28%</td><td>State monopoly</td><td>Govt self-insurance</td></tr>
+<tr><td>1990</td><td>63.6</td><td>48.4</td><td>15.2</td><td>24%</td><td>Pre-liberalization</td><td>Public sector pools</td></tr>
+<tr><td>2000</td><td>101.6</td><td>77.2</td><td>24.4</td><td>24%</td><td>Private IPPs enter</td><td>Commercial insurance begins</td></tr>
+<tr><td>2010</td><td>173.6</td><td>131.6</td><td>42.0</td><td>24%</td><td>Coal expansion + Solar Mission</td><td>EAR/CAR boom</td></tr>
+<tr><td>2015</td><td>278.1</td><td>205.9</td><td>72.2</td><td>26%</td><td>RE push begins</td><td>Wind/Solar policies emerge</td></tr>
+<tr><td>2020</td><td>370.1</td><td>234.7</td><td>135.4</td><td>37%</td><td>100 GW RE crossed</td><td>Portfolio covers for RE</td></tr>
+<tr><td>2022</td><td>399.5</td><td>237.4</td><td>162.1</td><td>41%</td><td>40% NF achieved</td><td>Hailstorm as top solar peril</td></tr>
+<tr class="highlight-row"><td>2025</td><td>450.3</td><td>243.9</td><td>206.4</td><td>46%</td><td>Current</td><td>BESS/H2 new product need</td></tr>
+</table>
+
+<h3>Policy Milestones That Shaped the Sector</h3>
+<table>
+<tr><th>Year</th><th>Policy/Event</th><th>Impact on Insurance Market</th></tr>
+<tr><td>1991</td><td>Sector liberalization — private IPPs allowed</td><td>Created commercial insurance demand</td></tr>
+<tr><td>2003</td><td>Electricity Act — deregulation, open access</td><td>More distributed assets = more policies</td></tr>
+<tr><td>2010</td><td>National Solar Mission launched</td><td>New product category: solar insurance</td></tr>
+<tr><td>2015</td><td>COP21 — 175 GW RE commitment</td><td>Accelerated CAR/EAR for RE construction</td></tr>
+<tr><td>2020</td><td>500 GW non-fossil target announced</td><td>Tripled long-term premium opportunity</td></tr>
+<tr><td>2023</td><td>Green Hydrogen Mission</td><td>Entirely new risk class — no loss data</td></tr>
+<tr><td>2024</td><td>Offshore wind tenders issued</td><td>Marine + construction specialist cover needed</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Growth Rate Comparison:</strong> Non-fossil CAGR of 15.2% (2014–2025) vs Fossil at just 1.5%. By 2028, non-fossil will exceed fossil capacity for the first time. The insurance portfolio must shift accordingly — from thermal-heavy to RE-dominant.
+</div>
+</div>
+
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 6</span></div>
+<h2><span class="chapter-num">6</span> Future Projections & National Targets (2026–2032)</h2>
+
+<p>India's power sector is projected to nearly double by 2032, reaching ~800 GW. The government's National Electricity Plan (NEP 2023) provides a clear roadmap. For ICICI Lombard, this translates to a proportional growth in insurable assets.</p>
+
+<table>
+<tr><th>Year</th><th>Total Capacity (GW)</th><th>Peak Demand (GW)</th><th>Annual Addition</th><th>Cumulative New Premium (Est.)</th></tr>
+<tr><td>2026</td><td>~490</td><td>277</td><td>~45 GW</td><td>₹500 Cr incremental</td></tr>
+<tr><td>2027</td><td>~540</td><td>295</td><td>~50 GW</td><td>₹1,100 Cr incremental</td></tr>
+<tr><td>2028</td><td>~590</td><td>314</td><td>~50 GW</td><td>₹1,800 Cr incremental</td></tr>
+<tr><td>2030</td><td>~680</td><td>352</td><td>~45 GW</td><td>₹3,200 Cr incremental</td></tr>
+<tr><td>2032</td><td>~800</td><td>390</td><td>~60 GW</td><td>₹5,000 Cr incremental</td></tr>
+</table>
+
+<h3>Planned Additions (2025–2030)</h3>
+<table>
+<tr><th>Source</th><th>Addition (GW)</th><th>Annual Rate</th><th>Insurance Type</th><th>Estimated CAR Premium</th></tr>
+<tr><td>☀️ Solar</td><td>+180</td><td>35-40 GW/yr</td><td>CAR + MD + Weather Parametric</td><td>₹150-200 Cr/yr</td></tr>
+<tr><td>🌬️ Wind (Onshore)</td><td>+40</td><td>8 GW/yr</td><td>EAR + MD + MLOP</td><td>₹80-100 Cr/yr</td></tr>
+<tr><td>🌊 Wind (Offshore)</td><td>+4</td><td>1 GW/yr from 2028</td><td>Marine CAR + Marine Cargo</td><td>₹40-60 Cr/yr</td></tr>
+<tr><td>🔋 BESS</td><td>+20</td><td>4 GW/yr</td><td>New product — Fire + BI</td><td>₹30-50 Cr/yr</td></tr>
+<tr><td>⚛️ Nuclear</td><td>+8</td><td>1.5 GW/yr</td><td>Govt pool (NPCIL)</td><td>Excluded from market</td></tr>
+<tr><td>🏭 Coal</td><td>+10</td><td>Only under-construction</td><td>EAR completion policies</td><td>₹20-30 Cr/yr</td></tr>
+</table>
+
+<div class="key-point">
+<strong>🎯 Strategic Takeaway:</strong> The next 5 years will see ₹25-30 lakh crore of new power assets created. At typical insurance rates (0.15-0.25% for CAR, 0.05-0.10% for operational), this adds ₹3,000-5,000 Cr to the addressable premium pool. ICICI Lombard's target should be 15-20% market share = ₹500-1,000 Cr incremental GWP by 2030.
+</div>
+</div>
+
+<!-- ==================== CHAPTERS 7-8 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 7</span></div>
+<h2><span class="chapter-num">7</span> Market Players — Renewable Energy Leaders</h2>
+
+<p>India's RE market is dominated by well-capitalized private companies with aggressive growth targets. These are ICICI Lombard's primary prospect universe for new business development.</p>
+
+<table>
+<tr><th>Rank</th><th>Company</th><th>RE (GW)</th><th>Solar</th><th>Wind</th><th>Market Share</th><th>2030 Target</th><th>Listed</th></tr>
+<tr><td>1</td><td><strong>Adani Green (AGEL)</strong></td><td>20.0</td><td>13.5</td><td>5.5</td><td>8.5%</td><td>45 GW</td><td>BSE/NSE</td></tr>
+<tr><td>2</td><td><strong>ReNew Energy</strong></td><td>11.0</td><td>5.5</td><td>5.5</td><td>4.7%</td><td>18 GW</td><td>NASDAQ</td></tr>
+<tr><td>3</td><td><strong>Greenko Group</strong></td><td>9.2</td><td>4.2</td><td>3.5</td><td>3.9%</td><td>15 GW</td><td>Unlisted (GIC)</td></tr>
+<tr><td>4</td><td><strong>Tata Power RE</strong></td><td>6.7</td><td>4.2</td><td>2.5</td><td>2.8%</td><td>15 GW</td><td>BSE/NSE</td></tr>
+<tr><td>5</td><td><strong>JSW Energy</strong></td><td>5.8</td><td>3.2</td><td>2.6</td><td>2.5%</td><td>20 GW</td><td>BSE/NSE</td></tr>
+<tr><td>6</td><td><strong>NTPC RE</strong></td><td>5.2</td><td>3.8</td><td>1.4</td><td>2.2%</td><td>60 GW</td><td>PSU</td></tr>
+<tr><td>7</td><td><strong>Sembcorp India</strong></td><td>4.8</td><td>2.8</td><td>2.0</td><td>2.0%</td><td>10 GW</td><td>Temasek</td></tr>
+<tr><td>8</td><td><strong>Avaada Energy</strong></td><td>4.5</td><td>4.5</td><td>—</td><td>1.9%</td><td>11 GW</td><td>Private</td></tr>
+<tr><td>9</td><td><strong>Azure Power</strong></td><td>4.2</td><td>4.2</td><td>—</td><td>1.8%</td><td>8 GW</td><td>Private (Omers)</td></tr>
+<tr><td>10</td><td><strong>Hero Future</strong></td><td>3.8</td><td>2.2</td><td>1.6</td><td>1.6%</td><td>8 GW</td><td>Private</td></tr>
+</table>
+
+<h3>Thermal Power Companies (Existing Portfolio)</h3>
+<table>
+<tr><th>Company</th><th>Coal (GW)</th><th>Gas (GW)</th><th>Total Thermal</th><th>Key Locations</th></tr>
+<tr><td>NTPC Ltd</td><td>48.0</td><td>7.0</td><td>55.0</td><td>Singrauli, Rihand, Korba, Ramagundam, Talcher</td></tr>
+<tr><td>Adani Power</td><td>16.0</td><td>—</td><td>16.0</td><td>Mundra, Tiroda, Kawai, Raipur, Raigarh</td></tr>
+<tr><td>Tata Power</td><td>8.0</td><td>2.0</td><td>10.0</td><td>Mundra UMPP, Trombay, Maithon</td></tr>
+<tr><td>JSW Energy</td><td>5.5</td><td>—</td><td>5.5</td><td>Ratnagiri, Barmer</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Business Development Priority:</strong> AGEL's 45 GW target by 2030 means adding 5 GW/year — generating ₹75-100 Cr new CAR premium annually from one client alone. Similarly, NTPC RE's 60 GW ambition makes them the largest single growth account in the PSU segment.
+</div>
+</div>
+
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 8</span></div>
+<h2><span class="chapter-num">8</span> State-wise Capacity Distribution & Geography</h2>
+
+<p>Understanding geographic concentration is essential for catastrophe accumulation management. A single cyclone hitting Gujarat can impact 46+ GW; a hailstorm in Rajasthan can damage 40+ GW of solar.</p>
+
+<table>
+<tr><th>Rank</th><th>State</th><th>Total (GW)</th><th>Dominant Source</th><th>Solar (GW)</th><th>Wind (GW)</th><th>Key CAT Exposure</th></tr>
+<tr><td>1</td><td>Maharashtra</td><td>52.1</td><td>Coal</td><td>5.8</td><td>5.4</td><td>Cyclone (Konkan coast)</td></tr>
+<tr><td>2</td><td>Gujarat</td><td>46.8</td><td>Coal + RE</td><td>12.5</td><td>9.8</td><td>Cyclone + Earthquake (Zone V)</td></tr>
+<tr><td>3</td><td>Rajasthan</td><td>41.5</td><td>Solar</td><td>18.7</td><td>5.2</td><td>Hailstorm (Mar-Apr)</td></tr>
+<tr><td>4</td><td>Tamil Nadu</td><td>38.9</td><td>Wind</td><td>6.2</td><td>10.1</td><td>Cyclone (Bay of Bengal)</td></tr>
+<tr><td>5</td><td>Karnataka</td><td>34.2</td><td>Solar</td><td>9.5</td><td>5.5</td><td>Flood (monsoon)</td></tr>
+<tr><td>6</td><td>Uttar Pradesh</td><td>32.6</td><td>Coal</td><td>4.2</td><td>—</td><td>Flood (Gangetic plain)</td></tr>
+<tr><td>7</td><td>Andhra Pradesh</td><td>28.4</td><td>Solar</td><td>8.5</td><td>4.2</td><td>Cyclone (East coast)</td></tr>
+<tr><td>8</td><td>Madhya Pradesh</td><td>26.8</td><td>Coal</td><td>5.8</td><td>2.1</td><td>Hailstorm</td></tr>
+</table>
+
+<h3>Catastrophe Accumulation Zones</h3>
+<ul>
+<li><strong>Cyclone Zone (West Coast):</strong> Gujarat + Maharashtra coast — 30+ GW wind exposed. Historical: Cyclone Tauktae (₹180 Cr loss)</li>
+<li><strong>Cyclone Zone (East Coast):</strong> AP + Odisha + TN — 15+ GW wind + solar. Historical: Cyclone Fani, Amphan</li>
+<li><strong>Hailstorm Belt:</strong> Rajasthan + MP — 25+ GW solar exposed. Peak season: March-April</li>
+<li><strong>Earthquake Zone V:</strong> Gujarat (Kutch) — 20+ GW. Low frequency but catastrophic impact</li>
+<li><strong>Flood Zone:</strong> UP + Bihar + Assam plains — coal plants on river banks</li>
+</ul>
+
+<div class="key-point">
+<strong>🎯 CAT Management:</strong> ICICI Lombard must maintain geographic exposure limits. Example: Maximum 10% of power portfolio concentrated in any single cyclone-prone state. Reinsurance treaties should specifically model Rajasthan hail and Gujarat cyclone scenarios.
+</div>
+</div>
+
+<!-- ==================== CHAPTERS 9-10 ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 9</span></div>
+<h2><span class="chapter-num">9</span> Risk Analysis — ISO 31000 Framework</h2>
+
+<p>This chapter provides a comprehensive risk assessment for India's power sector using the ISO 31000:2018 Risk Management framework. Risks are categorized as Act of God (AOG) and Non-AOG, with EMV (Expected Monetary Value) quantification and source-specific mitigation strategies.</p>
+
+<h3>9.1 Insurable Risks — Act of God (AOG) Perils</h3>
+<table>
+<tr><th>Risk Event</th><th>Prob.</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments Affected</th><th>Mitigation Strategy</th></tr>
+<tr><td>Cyclone / Storm (160+ kmph)</td><td>Medium</td><td>Very High</td><td>50–200</td><td>Wind coastal, Solar</td><td>Cyclone-rated towers (IEC 61400), stow protocol</td></tr>
+<tr><td>Hailstorm (50mm+ diameter)</td><td>Medium</td><td>High</td><td>10–80</td><td>Solar (ground mount)</td><td>Glass-glass modules (3.2mm), tracker tilt-to-stow</td></tr>
+<tr><td>Flood / Waterlogging</td><td>Medium</td><td>High</td><td>20–100</td><td>Coal, Solar GBI</td><td>Elevated foundations, site drainage design</td></tr>
+<tr><td>Lightning Strike</td><td>High</td><td>Medium</td><td>5–30</td><td>Wind (blade+nacelle)</td><td>IEC 62305 LPS, rolling sphere method</td></tr>
+<tr><td>Earthquake (Zone IV/V)</td><td>Low</td><td>Very High</td><td>30–500</td><td>All (Gujarat, HP, UK)</td><td>Seismic design compliance, base isolation</td></tr>
+<tr><td>Landslide / Subsidence</td><td>Low</td><td>High</td><td>15–70</td><td>Hydro, Wind (hills)</td><td>Geotechnical surveys, slope stabilization</td></tr>
+</table>
+
+<h3>9.2 Insurable Risks — Non-AOG (Operational / Mechanical)</h3>
+<table>
+<tr><th>Risk Event</th><th>Prob.</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments</th><th>Mitigation</th></tr>
+<tr><td>Boiler Tube Failure / Explosion</td><td>High</td><td>Very High</td><td>20–300</td><td>Coal, Lignite</td><td>NDT, water chemistry, predictive AI</td></tr>
+<tr><td>Turbine Blade Failure</td><td>Medium</td><td>High</td><td>20–80</td><td>Wind</td><td>CMS, blade inspection (drone/rope)</td></tr>
+<tr><td>Gearbox Failure</td><td>Medium</td><td>High</td><td>15–50</td><td>Wind</td><td>Oil analysis, vibration monitoring</td></tr>
+<tr><td>Transformer Failure (Main)</td><td>Medium</td><td>High</td><td>15–60</td><td>All sources</td><td>DGA oil analysis, online monitoring</td></tr>
+<tr><td>Fire (Electrical / Coal dust)</td><td>Medium</td><td>High</td><td>10–120</td><td>Coal, Solar (DC arc)</td><td>Detection + suppression, dust management</td></tr>
+<tr><td>Generator / Alternator Damage</td><td>Low</td><td>Very High</td><td>30–150</td><td>Coal, Gas, Hydro</td><td>Vibration monitoring, overhaul at OEM intervals</td></tr>
+<tr><td>Solar Panel PID / Hotspot</td><td>High</td><td>Medium</td><td>5–25</td><td>Solar</td><td>Drone thermal imaging, IV curve testing</td></tr>
+<tr><td>Inverter / Converter Failure</td><td>High</td><td>Medium</td><td>3–15</td><td>Solar, BESS</td><td>N+1 redundancy, firmware updates</td></tr>
+<tr><td>Cable Fault (Underground)</td><td>Medium</td><td>Medium</td><td>5–20</td><td>Solar, Wind farm</td><td>Cable testing, thermal monitoring</td></tr>
+</table>
+
+<h3>9.3 Risk Assessment Matrix (Probability × Impact)</h3>
+<table>
+<tr><th style="background:#333"></th><th style="background:#b71c1c;color:white">Very High Impact</th><th style="background:#e65100;color:white">High Impact</th><th style="background:#f9a825;color:#333">Medium Impact</th></tr>
+<tr><td style="background:#eee"><strong>High Prob.</strong></td><td style="background:#ffcdd2">Boiler Tube (Coal)</td><td style="background:#ffcdd2">Lightning (Wind)</td><td style="background:#fff9c4">PID/Hotspot, Inverter</td></tr>
+<tr><td style="background:#eee"><strong>Medium Prob.</strong></td><td style="background:#ffcdd2">Cyclone, Flood</td><td style="background:#ffe0b2">Blade, Transformer, Fire, Hail, Gearbox</td><td style="background:#fff9c4">Cable fault</td></tr>
+<tr><td style="background:#eee"><strong>Low Prob.</strong></td><td style="background:#ffe0b2">Earthquake, Generator</td><td style="background:#fff9c4">Landslide</td><td style="background:#c8e6c9">Diesel spill</td></tr>
+</table>
+
+<h3>9.4 Claims Case Studies</h3>
+<table>
+<tr><th>Incident</th><th>Year</th><th>Type</th><th>Loss (₹ Cr)</th><th>Outage</th><th>Key Learning for Underwriters</th></tr>
+<tr><td>Cyclone Tauktae — Gujarat Wind Farms</td><td>2021</td><td>AOG</td><td>180</td><td>4 months</td><td>47 turbines damaged. Sub-limits in AOG section were inadequate. Cyclone-rated towers essential for coast.</td></tr>
+<tr><td>Ramagundam STPS Boiler Explosion</td><td>2022</td><td>Non-AOG</td><td>95</td><td>6 months</td><td>Plant was 25+ years. NDT frequency was insufficient. Weld quality compliance missed during last overhaul.</td></tr>
+<tr><td>Rajasthan Solar Park Hailstorm</td><td>2023</td><td>AOG</td><td>45</td><td>2 months</td><td>12,000 panels destroyed in 20 mins. Glass-backsheet modules shattered; glass-glass survived. Policy should mandate hail-resistant specs.</td></tr>
+<tr><td>Tamil Nadu Wind Farm Lightning</td><td>2022</td><td>AOG</td><td>28</td><td>3 months</td><td>Blade + generator damage. LPS upgrade (₹8 lakh/turbine) has ROI of 3 years. Receptors need annual replacement.</td></tr>
+<tr><td>Mundra UMPP Coal Handling Fire</td><td>2020</td><td>Non-AOG</td><td>120</td><td>8 months</td><td>Conveyor belt fire from coal dust accumulation. Fire barriers between sections and dust suppression spray critical.</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Claims Pattern:</strong> In power sector, Business Interruption (MLOP) claims are typically 2-3x larger than Material Damage claims. Reason: repair lead times are long (turbine rotor: 12-18 months, transformer: 6-9 months, crane for wind: 3-6 months in India).
+</div>
+</div>
+
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 10</span></div>
+<h2><span class="chapter-num">10</span> Emerging Technologies & New Risk Frontiers</h2>
+
+<p>Five emerging technologies will dominate India's power sector additions in the next decade. Each creates entirely new risk profiles with limited or no actuarial loss data — presenting both a challenge and a first-mover opportunity for ICICI Lombard.</p>
+
+<table>
+<tr><th>Technology</th><th>India Target</th><th>Investment (₹ Cr)</th><th>Primary Risk</th><th>Insurance Challenge</th><th>ICICI Lombard Opportunity</th></tr>
+<tr><td><strong>BESS (Battery Storage)</strong></td><td>20 GW by 2030</td><td>80,000</td><td>Thermal runaway → chain reaction fire</td><td>No loss history in India; global events (Arizona, Australia)</td><td>First-mover: develop BESS-specific product</td></tr>
+<tr><td><strong>Green Hydrogen</strong></td><td>5 MMT by 2030</td><td>1,50,000</td><td>Hydrogen explosion; electrolyzer failure</td><td>Entirely new — no actuarial data</td><td>Partner with global reinsurers (Munich Re, Swiss Re)</td></tr>
+<tr><td><strong>Offshore Wind</strong></td><td>4 GW by 2030</td><td>60,000</td><td>Marine corrosion, subsea cable, cyclone</td><td>Marine engineering expertise needed</td><td>Specialist marine team development</td></tr>
+<tr><td><strong>Floating Solar</strong></td><td>10 GW by 2030</td><td>40,000</td><td>Anchor failure, water ingress, biofouling</td><td>Hybrid land + marine risk profile</td><td>Combined property + marine policy</td></tr>
+<tr><td><strong>Pumped Hydro Storage</strong></td><td>27 GW planned</td><td>1,20,000</td><td>Dam safety, geological instability, tunnel collapse</td><td>Construction phase is high-risk (5-7 years)</td><td>Long-tail EAR with annual step-ups</td></tr>
+</table>
+
+<h3>BESS — Deep Dive (Highest Priority for 2025-2027)</h3>
+<p>Battery Energy Storage Systems store excess solar/wind energy for use after sunset. India targets 20 GW by 2030. The primary risk is <strong>thermal runaway</strong> — when one cell overheats and triggers adjacent cells in an uncontrollable chain reaction, leading to intense fires (lithium burns at 2,000°C, cannot be extinguished with water).</p>
+<ul>
+<li><strong>Global incidents:</strong> Arizona (2019 — 4 firefighters injured), Australia (2021 — Tesla Megapack fire burned 3 days), South Korea (23 fires in 3 years)</li>
+<li><strong>Root causes:</strong> Manufacturing defects, overcharging, cooling system failure, external fire exposure</li>
+<li><strong>Insurance product needed:</strong> Material Damage + Fire + BI + Third-party liability (toxic gas release)</li>
+<li><strong>Pricing challenge:</strong> No Indian loss data. Must rely on global benchmarks + engineering assessment</li>
+</ul>
+
+<div class="key-point">
+<strong>🎯 Action Item:</strong> ICICI Lombard should develop a standalone "BESS All-Risk" product by Q1 2027 — covering thermal runaway, electrical failure, performance degradation, and environmental liability. Early-mover advantage is critical as 20 GW = ₹80,000 Cr assets will need coverage.
+</div>
+</div>
+
+<!-- ==================== CHAPTERS 11-12 + ANNEXURE ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 11</span></div>
+<h2><span class="chapter-num">11</span> Insurance Market Sizing & Opportunity Analysis</h2>
+
+<p>The Indian power sector insurance market is estimated at <strong>₹8,000–10,000 Cr annual premium</strong> across all product lines. With 50+ GW annual additions, this market is growing at 15-20% CAGR — significantly faster than overall commercial insurance growth (10-12%).</p>
+
+<h3>Market Segmentation by Product</h3>
+<table>
+<tr><th>Product Line</th><th>Est. Market Size (₹ Cr/yr)</th><th>Growth Rate</th><th>Key Buyers</th><th>ICICI Lombard Position</th></tr>
+<tr><td>CAR / EAR (Construction)</td><td>2,500–3,000</td><td>20-25%</td><td>EPC contractors, developers</td><td>Strong — broker relationships</td></tr>
+<tr><td>Material Damage (Operational)</td><td>3,000–3,500</td><td>10-12%</td><td>Plant owners (NTPC, Adani, etc.)</td><td>Moderate — PSU tenders competitive</td></tr>
+<tr><td>MLOP / Business Interruption</td><td>1,500–2,000</td><td>15-18%</td><td>All operators</td><td>Opportunity — often sold with MD</td></tr>
+<tr><td>Marine Cargo (Equipment)</td><td>500–700</td><td>12-15%</td><td>Importers (turbines, panels, transformers)</td><td>Moderate</td></tr>
+<tr><td>Liability (Third Party)</td><td>200–300</td><td>8-10%</td><td>Power utilities</td><td>Developing</td></tr>
+<tr><td>Parametric / Weather</td><td>50–100</td><td>30%+ (new)</td><td>Wind/Solar operators</td><td>Innovation opportunity</td></tr>
+<tr class="highlight-row"><td><strong>TOTAL</strong></td><td><strong>8,000–10,000</strong></td><td><strong>15-20%</strong></td><td></td><td></td></tr>
+</table>
+
+<h3>ICICI Lombard Target (2025–2030)</h3>
+<table>
+<tr><th>Metric</th><th>Current (FY25 Est.)</th><th>Target FY28</th><th>Target FY30</th></tr>
+<tr><td>Power Sector GWP</td><td>₹400-500 Cr</td><td>₹800-900 Cr</td><td>₹1,200-1,500 Cr</td></tr>
+<tr><td>Market Share</td><td>~5-6%</td><td>~10%</td><td>~15%</td></tr>
+<tr><td>Key Accounts</td><td>~50</td><td>~100</td><td>~150</td></tr>
+<tr><td>New Products Launched</td><td>Standard MD+BI</td><td>+BESS, +Parametric</td><td>+Offshore, +H2</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Competitive Landscape:</strong> New India Assurance and Oriental Insurance dominate PSU accounts via national tenders. ICICI Lombard's competitive edge is in private sector (Adani, Tata, ReNew, JSW) where specialized underwriting, risk engineering, and claims service differentiate. Focus on private accounts for growth.
+</div>
+</div>
+
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Chapter 12</span></div>
+<h2><span class="chapter-num">12</span> Underwriting Considerations & Best Practices</h2>
+
+<h3>12.1 Pre-Underwriting Technical Assessment</h3>
+<table>
+<tr><th>Parameter</th><th>Coal / Thermal</th><th>Wind</th><th>Solar</th></tr>
+<tr><td>Age of Plant</td><td>Critical (15+ yr = higher risk)</td><td>Important (blade erosion)</td><td>Less critical (module warranty 25yr)</td></tr>
+<tr><td>OEM / Make</td><td>BHEL vs imported boiler</td><td>Vestas/Siemens vs domestic</td><td>Tier-1 module maker essential</td></tr>
+<tr><td>Location (CAT zone)</td><td>Flood, Earthquake</td><td>Cyclone, Lightning</td><td>Hail, Flood</td></tr>
+<tr><td>Maintenance Quality</td><td>NDT records, overhaul history</td><td>CMS data, blade inspection reports</td><td>PR trends, drone surveys</td></tr>
+<tr><td>Load Factor</td><td>PLF <50% = cycling stress</td><td>CUF <18% = poor site selection</td><td>CUF <15% = soiling/shading issue</td></tr>
+<tr><td>BI Exposure</td><td>Highest (₹1,000+ Cr/yr for 500MW)</td><td>Seasonal (monsoon loss = 3x)</td><td>Lowest per MW</td></tr>
+</table>
+
+<h3>12.2 Key Exclusions & Sub-limits to Watch</h3>
+<ul>
+<li><strong>AOG sub-limits:</strong> Many policies have inadequate cyclone/flood sub-limits (₹5-10 Cr when actual loss can be ₹50-200 Cr). Always review.</li>
+<li><strong>Wear & tear exclusion:</strong> Boiler tube failures in old plants often disputed as W&T vs sudden/unforeseen. Clear wording needed.</li>
+<li><strong>Consequential loss:</strong> Coal quality causing clinker → tube failure — is this excluded? Policy wording critical.</li>
+<li><strong>Waiting period (BI):</strong> 30-60 days typical. For solar/wind (repair in 7-14 days), shorter WP may be appropriate.</li>
+<li><strong>Basis of settlement:</strong> Reinstatement vs indemnity — critical for technology obsolescence (old wind turbines).</li>
+</ul>
+
+<h3>12.3 Risk Engineering Recommendations</h3>
+<table>
+<tr><th>Source</th><th>Top 3 Risk Engineering Interventions</th><th>Expected Loss Reduction</th></tr>
+<tr><td>Coal</td><td>1. Annual NDT of boiler tubes<br/>2. Coal quality real-time monitoring<br/>3. Fire detection in coal handling area</td><td>30-40% reduction in MD claims</td></tr>
+<tr><td>Wind</td><td>1. CMS installation on all turbines<br/>2. Annual LPS inspection + receptor replacement<br/>3. Drone blade inspection every 2 years</td><td>25-35% reduction in blade/generator claims</td></tr>
+<tr><td>Solar</td><td>1. Quarterly drone thermal imaging<br/>2. Hail-resistant module specification in policy<br/>3. Tracker stow protocol for hail/cyclone alerts</td><td>40-50% reduction in hail claims</td></tr>
+</table>
+
+<div class="key-point">
+<strong>🎯 Golden Rule of Power Underwriting:</strong> Never underwrite a power risk without a site survey report less than 2 years old. The power sector has high asset degradation rates — especially coal (15+ yr) and wind (blade erosion). What was acceptable 3 years ago may be uninsurable today.
+</div>
+</div>
+
+<!-- ==================== ANNEXURE ==================== -->
+<div class="chapter">
+<div class="page-header"><span class="brand">ICICI Lombard | Power & Energy Practice</span><span class="doc-title">Annexure</span></div>
+<h2><span class="chapter-num">A</span> Data Sources, Glossary & References</h2>
+
+<h3>Data Sources</h3>
+<table>
+<tr><th>Source</th><th>Data Used</th><th>URL</th></tr>
+<tr><td>Central Electricity Authority (CEA)</td><td>Installed capacity, generation, PLF/CUF</td><td>cea.nic.in</td></tr>
+<tr><td>Ministry of New & Renewable Energy (MNRE)</td><td>RE capacity, physical progress (Jun 2026)</td><td>mnre.gov.in</td></tr>
+<tr><td>Ministry of Power</td><td>Policy frameworks, NEP, demand projections</td><td>powermin.gov.in</td></tr>
+<tr><td>National Power Portal (NPP)</td><td>Real-time generation, state-wise data</td><td>npp.gov.in</td></tr>
+<tr><td>Company Annual Reports</td><td>Market player capacities, financial data</td><td>BSE/NSE filings</td></tr>
+<tr><td>ISO 31000:2018</td><td>Risk management framework</td><td>International standard</td></tr>
+<tr><td>IEC 62305 / IS 2309</td><td>Lightning protection standards</td><td>International standard</td></tr>
+<tr><td>IEC 61400</td><td>Wind turbine design standards</td><td>International standard</td></tr>
+</table>
+
+<h3>Technical Glossary</h3>
+<table>
+<tr><th>Term</th><th>Full Form</th><th>Meaning</th></tr>
+<tr><td>PLF</td><td>Plant Load Factor</td><td>% of time a thermal plant generates at full capacity</td></tr>
+<tr><td>CUF</td><td>Capacity Utilization Factor</td><td>Same as PLF but for renewables</td></tr>
+<tr><td>BU</td><td>Billion Units (kWh)</td><td>1 BU = 1,000 Million Units = 1 billion kWh</td></tr>
+<tr><td>CAR</td><td>Contractors All Risk</td><td>Insurance for construction phase</td></tr>
+<tr><td>EAR</td><td>Erection All Risk</td><td>Insurance for equipment installation phase</td></tr>
+<tr><td>MD</td><td>Material Damage</td><td>Insurance for operational asset damage</td></tr>
+<tr><td>MLOP</td><td>Machinery Loss of Profit</td><td>Revenue loss cover during repair period</td></tr>
+<tr><td>BI</td><td>Business Interruption</td><td>Broader term for profit loss during outage</td></tr>
+<tr><td>NDT</td><td>Non-Destructive Testing</td><td>Inspection without damaging the equipment</td></tr>
+<tr><td>DGA</td><td>Dissolved Gas Analysis</td><td>Transformer oil testing for early fault detection</td></tr>
+<tr><td>CMS</td><td>Condition Monitoring System</td><td>Real-time sensor-based equipment health monitoring</td></tr>
+<tr><td>LPS</td><td>Lightning Protection System</td><td>System to safely conduct lightning to ground</td></tr>
+<tr><td>PID</td><td>Potential Induced Degradation</td><td>Solar panel efficiency loss from voltage stress</td></tr>
+<tr><td>BESS</td><td>Battery Energy Storage System</td><td>Stores electricity for later use</td></tr>
+<tr><td>EMV</td><td>Expected Monetary Value</td><td>Probability × Impact = risk-weighted loss estimate</td></tr>
+</table>
+</div>
+
+<!-- ==================== FINAL PAGE ==================== -->
 <div class="page-footer">
-<p style="font-size:13px; font-weight:700; color:#333;">⚡ India Power Sector — Complete Intelligence eBook</p>
-<p>ICICI Lombard General Insurance Company Ltd.</p>
-<p>Designed by Deepak Arora | Data: CEA, MNRE, Ministry of Power | FY 2024-25</p>
+<div class="brand-line">ICICI LOMBARD GENERAL INSURANCE COMPANY LTD.</div>
+<p style="font-size:12px; color:#666; margin-top:5px;">ICICI Lombard House, 414, Veer Savarkar Marg, Prabhadevi, Mumbai — 400025</p>
+<p style="font-size:12px; color:var(--navy); font-weight:700; margin-top:8px;">India Power Sector Intelligence Report — July 2026 Edition</p>
+<p style="font-size:11px; color:#888; margin-top:5px;">Designed by Deepak Arora | Power & Energy Practice</p>
+<div style="margin-top:15px; padding:10px; background:#FFF3E0; border:1px solid #FFE0B2; border-radius:4px;">
+<p style="font-size:10px; color:#795548; font-weight:700; margin:0;">
+⚠️ CONFIDENTIALITY NOTICE: This document is the exclusive property of ICICI Lombard General Insurance Company Ltd. It contains proprietary information intended solely for internal business use. Any unauthorized reproduction, distribution, disclosure, or use of this material — in whole or in part — is strictly prohibited. If you have received this document in error, please destroy all copies immediately and notify the sender.
+</p>
+</div>
 </div>
 
 </div><!-- end .ebook -->
