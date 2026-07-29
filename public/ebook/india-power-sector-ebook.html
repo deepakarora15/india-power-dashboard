@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>India Power Sector — Complete eBook</title>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Mulish', sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a2e; background: #fff; }
+.ebook { max-width: 850px; margin: 0 auto; padding: 40px 50px; }
+
+/* Cover */
+.cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(160deg, #003D50 0%, #005B75 40%, #B02A30 100%); color: white; padding: 80px 40px; margin: -40px -50px 40px -50px; }
+.cover h1 { font-size: 42px; font-weight: 900; margin-bottom: 10px; }
+.cover .subtitle { font-size: 18px; opacity: 0.9; font-weight: 600; }
+.cover .stats { display: flex; gap: 30px; margin-top: 40px; }
+.cover .stat { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 20px 25px; }
+.cover .stat .val { font-size: 28px; font-weight: 900; }
+.cover .stat .lbl { font-size: 11px; opacity: 0.7; text-transform: uppercase; margin-top: 4px; }
+.cover .meta { margin-top: 50px; font-size: 12px; opacity: 0.6; line-height: 2; }
+
+/* TOC */
+.toc { page-break-after: always; margin: 40px 0; }
+.toc h2 { font-size: 24px; color: #005B75; border-bottom: 3px solid #005B75; padding-bottom: 8px; margin-bottom: 20px; }
+.toc-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted #ddd; }
+.toc-item .title { font-weight: 700; }
+
+/* Chapters */
+.chapter { page-break-before: always; margin-top: 50px; }
+.chapter:first-of-type { page-break-before: avoid; }
+.chapter-num { display: inline-block; background: #005B75; color: white; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-size: 14px; font-weight: 900; margin-right: 10px; }
+h2 { font-size: 22px; font-weight: 900; color: #005B75; margin-bottom: 15px; display: flex; align-items: center; }
+h3 { font-size: 17px; font-weight: 800; color: #333; margin: 20px 0 10px 0; }
+p { margin-bottom: 12px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
+th, td { padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; }
+th { background: #005B75; color: white; font-weight: 700; font-size: 12px; text-transform: uppercase; }
+tr:nth-child(even) { background: #f8fafb; }
+.highlight-row { background: #e8f5e9 !important; font-weight: 700; }
+
+/* Stat boxes */
+.stat-row { display: flex; gap: 15px; margin: 15px 0; }
+.stat-box { flex: 1; background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 15px; text-align: center; }
+.stat-box .val { font-size: 24px; font-weight: 900; color: #B02A30; }
+.stat-box .lbl { font-size: 10px; color: #666; text-transform: uppercase; font-weight: 600; margin-top: 3px; }
+
+/* Bar */
+.bar-row { display: flex; height: 28px; border-radius: 6px; overflow: hidden; margin: 10px 0; }
+.bar-seg { display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: 700; }
+
+/* Insight */
+.insight { background: #FFF8E1; border-left: 4px solid #F99D27; border-radius: 4px; padding: 14px 18px; margin: 15px 0; font-size: 13px; }
+.insight strong { color: #E65100; }
+
+/* Footer */
+.page-footer { text-align: center; padding: 30px 0; border-top: 2px solid #e0e0e0; margin-top: 50px; font-size: 11px; color: #999; }
+</style>
+</head>
+<body>
+<div class="ebook">
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <h1>⚡ India Power Sector</h1>
+  <p class="subtitle">A Complete Intelligence Guide</p>
+  <div class="stats">
+    <div class="stat"><div class="val">450 GW</div><div class="lbl">Installed Capacity</div></div>
+    <div class="stat"><div class="val">1,772 BU</div><div class="lbl">Annual Generation</div></div>
+    <div class="stat"><div class="val">45.8%</div><div class="lbl">Non-Fossil Share</div></div>
+  </div>
+  <div class="meta">
+    Data Period: FY 2024-25 | Sources: CEA, MNRE, Ministry of Power<br/>
+    ICICI Lombard General Insurance Company Ltd. | Designed by Deepak Arora
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>📖 Table of Contents</h2>
+  <div class="toc-item"><span class="title">Chapter 1: Industry Overview</span></div>
+  <div class="toc-item"><span class="title">Chapter 2: Energy Mix & Source Breakdown</span></div>
+  <div class="toc-item"><span class="title">Chapter 3: Power Generation & Load Factors</span></div>
+  <div class="toc-item"><span class="title">Chapter 4: Ownership Structure</span></div>
+  <div class="toc-item"><span class="title">Chapter 5: Growth Timeline (1975–2025)</span></div>
+  <div class="toc-item"><span class="title">Chapter 6: Future Projections (2026–2032)</span></div>
+  <div class="toc-item"><span class="title">Chapter 7: Market Players — RE Leaders</span></div>
+  <div class="toc-item"><span class="title">Chapter 8: State-wise Distribution</span></div>
+  <div class="toc-item"><span class="title">Chapter 9: Risk Analysis (ISO 31000)</span></div>
+  <div class="toc-item"><span class="title">Chapter 10: Emerging Technologies</span></div>
+  <div class="toc-item"><span class="title">Chapter 11: Insurance Market Opportunity</span></div>
+  <div class="toc-item"><span class="title">Chapter 12: Data Sources & References</span></div>
+</div>
+
+<!-- CHAPTER 1 -->
+<div class="chapter">
+<h2><span class="chapter-num">1</span> Industry Overview</h2>
+<p>India is the <strong>3rd largest electricity producer</strong> and <strong>3rd largest consumer</strong> globally. The sector has undergone a 22x transformation — from 20 GW in 1975 to 450+ GW in 2025, powering 1.4 billion people across 36 states and union territories.</p>
+
+<div class="stat-row">
+<div class="stat-box"><div class="val">450.29 GW</div><div class="lbl">Total Installed Capacity</div></div>
+<div class="stat-box"><div class="val">1,771.7 BU</div><div class="lbl">Annual Generation FY25</div></div>
+<div class="stat-box"><div class="val">45.8%</div><div class="lbl">Non-Fossil Share</div></div>
+<div class="stat-box"><div class="val">22.5×</div><div class="lbl">Growth Since 1975</div></div>
+</div>
+
+<h3>Key Achievements</h3>
+<ul style="margin:10px 0 15px 20px;">
+<li>World's 3rd largest power system after China and USA</li>
+<li>Achieved 100% village electrification (Saubhagya scheme)</li>
+<li>Solar grew from 0 to 90 GW in just 12 years (2012–2025)</li>
+<li>Crossed 500 GW total generation capacity milestone in 2026</li>
+<li>Committed to Net Zero by 2070 and 500 GW non-fossil by 2030</li>
+</ul>
+
+<div class="insight">
+<strong>💡 Key Insight:</strong> India adds more power capacity per year (~40-50 GW) than most countries have in total. The energy transition is accelerating — 90% of new additions are now renewable.
+</div>
+</div>
+
+<!-- CHAPTER 2 -->
+<div class="chapter">
+<h2><span class="chapter-num">2</span> Energy Mix & Source Breakdown</h2>
+<p>India's power capacity is split between fossil (54.2%) and non-fossil (45.8%) sources. While fossil still dominates, the gap is closing rapidly — non-fossil share has doubled from 24% in 2000 to 45.8% in 2025.</p>
+
+<div class="bar-row">
+<div class="bar-seg" style="width:54.2%;background:#B02A30;">🔥 Fossil 243.87 GW (54.2%)</div>
+<div class="bar-seg" style="width:45.8%;background:#005B75;">🌿 Non-Fossil 206.42 GW (45.8%)</div>
+</div>
+
+<h3>Complete Source Breakdown</h3>
+<table>
+<tr><th>#</th><th>Source</th><th>Category</th><th>Capacity (MW)</th><th>Share</th></tr>
+<tr><td>1</td><td>Coal</td><td>Fossil</td><td>2,11,540</td><td>47.0%</td></tr>
+<tr><td>2</td><td>Solar</td><td>Non-Fossil</td><td>90,570</td><td>20.1%</td></tr>
+<tr><td>3</td><td>Large Hydro</td><td>Non-Fossil</td><td>47,050</td><td>10.4%</td></tr>
+<tr><td>4</td><td>Wind</td><td>Non-Fossil</td><td>47,650</td><td>10.6%</td></tr>
+<tr><td>5</td><td>Gas</td><td>Fossil</td><td>24,900</td><td>5.5%</td></tr>
+<tr><td>6</td><td>Biomass</td><td>Non-Fossil</td><td>11,420</td><td>2.5%</td></tr>
+<tr><td>7</td><td>Nuclear</td><td>Non-Fossil</td><td>8,180</td><td>1.8%</td></tr>
+<tr><td>8</td><td>Lignite</td><td>Fossil</td><td>6,740</td><td>1.5%</td></tr>
+<tr><td>9</td><td>Small Hydro</td><td>Non-Fossil</td><td>5,050</td><td>1.1%</td></tr>
+<tr><td>10</td><td>Diesel</td><td>Fossil</td><td>690</td><td>0.2%</td></tr>
+</table>
+
+<h3>Solar — The Star Performer</h3>
+<p>Solar has grown from nearly zero in 2010 to 90.6 GW by 2025. India is now the 4th largest solar market globally. Tariffs dropped 88% — from ₹17/kWh in 2010 to ₹1.99/kWh in 2024, making solar cheaper than new coal plants.</p>
+
+<h3>Wind — The Pioneer</h3>
+<p>India was an early wind adopter (1990s). With 47.6 GW, it's the 4th largest wind market. Turbines evolved from 250 kW to 5.5 MW. Tamil Nadu, Gujarat, and Rajasthan dominate. Offshore wind (30 GW target) is the next frontier.</p>
+
+<div class="insight">
+<strong>💡 Did You Know?</strong> India's solar capacity grew 45x in just 10 years (2015–2025). At current growth rate, solar alone will cross 280 GW by 2030 — more than India's entire coal fleet today.
+</div>
+</div>
+
+<!-- CHAPTER 3 -->
+<div class="chapter">
+<h2><span class="chapter-num">3</span> Power Generation & Load Factors</h2>
+<p>Total generation in FY24-25 was <strong>1,771.7 BU</strong>. Fossil fuels generate 71.9% despite having only 54% capacity — because coal runs 24/7 while solar/wind are intermittent.</p>
+
+<div class="stat-row">
+<div class="stat-box"><div class="val">1,274 BU</div><div class="lbl">Fossil (71.9%)</div></div>
+<div class="stat-box"><div class="val">497.7 BU</div><div class="lbl">Non-Fossil (28.1%)</div></div>
+<div class="stat-box"><div class="val">67.2%</div><div class="lbl">Coal's Gen Share</div></div>
+</div>
+
+<h3>Generation by Source</h3>
+<table>
+<tr><th>Source</th><th>Generation (BU)</th><th>Share</th><th>PLF/CUF</th><th>Interpretation</th></tr>
+<tr><td>Coal</td><td>1,189.7</td><td>67.2%</td><td>64.2%</td><td>Base load — runs 24/7</td></tr>
+<tr><td>Large Hydro</td><td>158.3</td><td>8.9%</td><td>38.4%</td><td>Monsoon dependent</td></tr>
+<tr><td>Solar</td><td>140.4</td><td>7.9%</td><td>18.2%</td><td>Daylight only (5-6 hrs)</td></tr>
+<tr><td>Wind</td><td>87.9</td><td>5.0%</td><td>21.5%</td><td>Seasonal (Jun-Sep peak)</td></tr>
+<tr><td>Nuclear</td><td>56.3</td><td>3.2%</td><td>78.6%</td><td>Highest efficiency</td></tr>
+<tr><td>Gas</td><td>49.7</td><td>2.8%</td><td>22.8%</td><td>Peak load only (expensive)</td></tr>
+<tr><td>Biomass</td><td>42.1</td><td>2.4%</td><td>42.1%</td><td>Harvest dependent</td></tr>
+<tr><td>Lignite</td><td>34.5</td><td>1.9%</td><td>58.4%</td><td>Regional (TN, Rajasthan)</td></tr>
+<tr><td>Small Hydro</td><td>12.7</td><td>0.7%</td><td>28.6%</td><td>Run-of-river, variable</td></tr>
+</table>
+
+<h3>The Capacity vs Generation Gap</h3>
+<p>This is the most important concept in power sector analysis. Coal has 47% of capacity but produces 67% of electricity because it runs at 64% PLF. Solar has 20% of capacity but only 8% of generation because CUF is just 18% (daylight constraint).</p>
+
+<div class="insight">
+<strong>💡 Why Coal Still Matters:</strong> Even as India adds 50+ GW of solar/wind annually, coal remains indispensable for nighttime/cloudy base load. Battery Energy Storage (BESS) at scale is the only way to displace coal — India targets 5 GW BESS by 2027.
+</div>
+</div>
+
+<!-- CHAPTER 4 -->
+<div class="chapter">
+<h2><span class="chapter-num">4</span> Ownership Structure</h2>
+<p>India's power sector has three ownership categories. The private sector dominates with 53.5% — a dramatic shift from 100% government ownership before 1991.</p>
+
+<table>
+<tr><th>Ownership</th><th>Key Players</th><th>Capacity (GW)</th><th>Share</th><th>Gen (BU)</th><th>Fossil:RE</th></tr>
+<tr><td><strong>Central PSU</strong></td><td>NTPC, NHPC, NPCIL, SJVN</td><td>103.45</td><td>23.0%</td><td>420.5</td><td>53:47</td></tr>
+<tr><td><strong>State PSU</strong></td><td>MAHAGENCO, GSECL, DVC</td><td>105.82</td><td>23.5%</td><td>438.2</td><td>68:32</td></tr>
+<tr><td><strong>Private</strong></td><td>Adani, Tata, ReNew, JSW</td><td>241.02</td><td>53.5%</td><td>893.7</td><td>48:52</td></tr>
+<tr class="highlight-row"><td><strong>TOTAL</strong></td><td></td><td><strong>450.29</strong></td><td><strong>100%</strong></td><td><strong>1,752.4</strong></td><td></td></tr>
+</table>
+
+<h3>Key Ownership Insights</h3>
+<ul style="margin:10px 0 15px 20px;">
+<li>Private sector owns <strong>79% of solar</strong> and <strong>91% of wind</strong> — driving India's clean energy transition</li>
+<li>NTPC (Central PSU) is the single largest generator at 73 GW — larger than many countries</li>
+<li>Nuclear is exclusively Central PSU (government) — 8.18 GW via NPCIL</li>
+<li>State PSU remains the most fossil-dependent at 68% thermal</li>
+<li>Private sector crossed 50% non-fossil for the first time in 2024</li>
+</ul>
+
+<div class="insight">
+<strong>💡 Transition Story:</strong> In 1991, India opened electricity to private investment. Today, private companies own more than both PSU categories combined. AGEL (Adani Green) alone has 20 GW — more than many state utilities.
+</div>
+</div>
+
+<!-- CHAPTER 5 -->
+<div class="chapter">
+<h2><span class="chapter-num">5</span> Growth Timeline (1975–2025)</h2>
+<p>India's power sector has grown <strong>22.5x in 50 years</strong>. The journey from 20 GW to 450 GW tells the story of India's industrialization, liberalization, and now the energy transition.</p>
+
+<table>
+<tr><th>Year</th><th>Total (GW)</th><th>Fossil (GW)</th><th>Non-Fossil (GW)</th><th>NF Share</th><th>Era</th></tr>
+<tr><td>1975</td><td>20.1</td><td>14.5</td><td>5.6</td><td>27.9%</td><td>State monopoly</td></tr>
+<tr><td>1990</td><td>63.6</td><td>48.4</td><td>15.2</td><td>23.9%</td><td>Pre-liberalization</td></tr>
+<tr><td>2000</td><td>101.6</td><td>77.2</td><td>24.4</td><td>24.0%</td><td>Private entry</td></tr>
+<tr><td>2005</td><td>132.3</td><td>98.4</td><td>33.9</td><td>25.6%</td><td>UMPP era</td></tr>
+<tr><td>2010</td><td>173.6</td><td>131.6</td><td>42.0</td><td>24.2%</td><td>Solar Mission</td></tr>
+<tr><td>2015</td><td>278.1</td><td>205.9</td><td>72.2</td><td>25.9%</td><td>RE push begins</td></tr>
+<tr><td>2017</td><td>326.9</td><td>225.6</td><td>101.3</td><td>31.0%</td><td>100 GW NF!</td></tr>
+<tr><td>2020</td><td>370.1</td><td>234.7</td><td>135.4</td><td>36.6%</td><td>COVID year</td></tr>
+<tr><td>2022</td><td>399.5</td><td>237.4</td><td>162.1</td><td>40.6%</td><td>40% NF achieved</td></tr>
+<tr class="highlight-row"><td>2025</td><td>450.3</td><td>243.9</td><td>206.4</td><td>45.8%</td><td>Current</td></tr>
+</table>
+
+<h3>Key Policy Milestones</h3>
+<table>
+<tr><th>Year</th><th>Milestone</th><th>Impact</th></tr>
+<tr><td>1991</td><td>Sector liberalization</td><td>Ended state monopoly, allowed private IPPs</td></tr>
+<tr><td>2003</td><td>Electricity Act</td><td>Deregulation, open access, power trading</td></tr>
+<tr><td>2010</td><td>National Solar Mission</td><td>Target 20 GW by 2022 (later revised to 100 GW)</td></tr>
+<tr><td>2015</td><td>COP21 Paris</td><td>India pledged 175 GW RE</td></tr>
+<tr><td>2020</td><td>500 GW target announced</td><td>Tripled ambition for non-fossil</td></tr>
+<tr><td>2021</td><td>COP26 Net Zero</td><td>Net Zero by 2070 commitment</td></tr>
+<tr><td>2023</td><td>Green Hydrogen Mission</td><td>5 MMT H2 production by 2030</td></tr>
+</table>
+</div>
+
+<!-- CHAPTER 6 -->
+<div class="chapter">
+<h2><span class="chapter-num">6</span> Future Projections (2026–2032)</h2>
+<p>India is projected to nearly double its power capacity to 800 GW by 2032, with 75%+ of new additions from solar and wind.</p>
+
+<table>
+<tr><th>Year</th><th>Projected Capacity (GW)</th><th>Demand (BU)</th><th>Key Driver</th></tr>
+<tr><td>2026</td><td>~490</td><td>1,880</td><td>30+ GW solar/year additions</td></tr>
+<tr><td>2027</td><td>~540</td><td>1,980</td><td>Offshore wind tenders, BESS pilots</td></tr>
+<tr><td>2028</td><td>~590</td><td>2,090</td><td>BESS at scale, coal plateau</td></tr>
+<tr><td>2030</td><td>~680</td><td>2,320</td><td>500 GW non-fossil target deadline</td></tr>
+<tr><td>2032</td><td>~800</td><td>2,580</td><td>India becomes 2nd largest power market</td></tr>
+</table>
+
+<h3>What Gets Added (2025–2030)</h3>
+<table>
+<tr><th>Source</th><th>Planned Addition</th><th>Key Notes</th></tr>
+<tr><td>☀️ Solar</td><td>+180 GW</td><td>35+ GW/year; domestic manufacturing ramp-up</td></tr>
+<tr><td>🌬️ Wind</td><td>+50 GW</td><td>Onshore + 4 GW offshore (Gujarat coast)</td></tr>
+<tr><td>🔋 BESS</td><td>+20 GW</td><td>Critical for solar integration post-sunset</td></tr>
+<tr><td>⚛️ Nuclear</td><td>+8 GW</td><td>10 new reactors under construction</td></tr>
+<tr><td>🏭 Coal</td><td>+10 GW</td><td>Only projects already under construction</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 The Crossover:</strong> By 2028, non-fossil capacity will exceed fossil for the first time in India's history. Fossil capacity plateaus at ~245 GW while all net additions are renewable.
+</div>
+</div>
+
+<!-- CHAPTER 7 -->
+<div class="chapter">
+<h2><span class="chapter-num">7</span> Market Players — RE Leaders</h2>
+<p>India's renewable market is dominated by aggressive private companies. Total RE capacity reached <strong>236.5 GW</strong> (Jun 2026, MNRE). AGEL became the first company globally to reach 20 GW through greenfield development.</p>
+
+<table>
+<tr><th>Rank</th><th>Company</th><th>RE (MW)</th><th>Solar</th><th>Wind</th><th>Share</th><th>Type</th></tr>
+<tr><td>1</td><td><strong>Adani Green (AGEL)</strong></td><td>20,000</td><td>13,500</td><td>5,500</td><td>8.5%</td><td>Private/BSE</td></tr>
+<tr><td>2</td><td><strong>ReNew Energy</strong></td><td>11,000</td><td>5,500</td><td>5,500</td><td>4.7%</td><td>Private/NASDAQ</td></tr>
+<tr><td>3</td><td><strong>Greenko Group</strong></td><td>9,200</td><td>4,200</td><td>3,500</td><td>3.9%</td><td>Private (GIC)</td></tr>
+<tr><td>4</td><td><strong>Tata Power RE</strong></td><td>6,700</td><td>4,200</td><td>2,500</td><td>2.8%</td><td>Private/BSE</td></tr>
+<tr><td>5</td><td><strong>JSW Energy</strong></td><td>5,800</td><td>3,200</td><td>2,600</td><td>2.5%</td><td>Private/BSE</td></tr>
+<tr><td>6</td><td>NTPC RE Ltd</td><td>5,200</td><td>3,800</td><td>1,400</td><td>2.2%</td><td>Central PSU</td></tr>
+<tr><td>7</td><td>Sembcorp India</td><td>4,800</td><td>2,800</td><td>2,000</td><td>2.0%</td><td>Private (Temasek)</td></tr>
+<tr><td>8</td><td>Avaada Energy</td><td>4,500</td><td>4,500</td><td>—</td><td>1.9%</td><td>Private</td></tr>
+<tr><td>9</td><td>Azure Power</td><td>4,200</td><td>4,200</td><td>—</td><td>1.8%</td><td>Private (Omers)</td></tr>
+<tr><td>10</td><td>Hero Future Energies</td><td>3,800</td><td>2,200</td><td>1,600</td><td>1.6%</td><td>Private</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Market Dynamics:</strong> Top 5 control 52.7 GW (22% of RE). NTPC RE is the fastest-growing PSU with 60 GW target by 2032. Foreign sovereign wealth funds (GIC Singapore, ADIA, Temasek) have invested heavily in Indian RE.
+</div>
+</div>
+
+<!-- CHAPTER 8 -->
+<div class="chapter">
+<h2><span class="chapter-num">8</span> State-wise Distribution</h2>
+<p>India's power capacity is concentrated in industrialized and resource-rich states. Maharashtra leads overall, while Rajasthan dominates solar and Tamil Nadu leads wind.</p>
+
+<table>
+<tr><th>Rank</th><th>State</th><th>Total (GW)</th><th>Dominant Source</th><th>Key Feature</th></tr>
+<tr><td>1</td><td>Maharashtra</td><td>52.1</td><td>Coal</td><td>Largest industrial consumer</td></tr>
+<tr><td>2</td><td>Gujarat</td><td>46.8</td><td>Coal + Solar</td><td>Kutch wind corridor, Charanka solar</td></tr>
+<tr><td>3</td><td>Rajasthan</td><td>41.5</td><td>Solar</td><td>Bhadla — world's largest solar park</td></tr>
+<tr><td>4</td><td>Tamil Nadu</td><td>38.9</td><td>Wind</td><td>Muppandal — Asia's largest wind farm</td></tr>
+<tr><td>5</td><td>Karnataka</td><td>34.2</td><td>Solar</td><td>Pavagada Ultra Mega Solar Park</td></tr>
+<tr><td>6</td><td>Uttar Pradesh</td><td>32.6</td><td>Coal</td><td>Largest population, growing demand</td></tr>
+<tr><td>7</td><td>Andhra Pradesh</td><td>28.4</td><td>Solar</td><td>Kurnool Ultra Mega Solar Park</td></tr>
+<tr><td>8</td><td>Madhya Pradesh</td><td>26.8</td><td>Coal</td><td>Rewa solar — PM Modi's showcase</td></tr>
+</table>
+
+<h3>Regional Energy Belts</h3>
+<ul style="margin:10px 0 15px 20px;">
+<li><strong>Coal Belt:</strong> Maharashtra, Gujarat, UP, MP, Chhattisgarh, Odisha, West Bengal (~280 GW combined)</li>
+<li><strong>Solar Belt:</strong> Rajasthan, Gujarat, Karnataka, AP, Tamil Nadu (highest irradiance 5.5+ kWh/m²/day)</li>
+<li><strong>Wind Corridor:</strong> Tamil Nadu coast, Gujarat Kutch, Rajasthan Jaisalmer, Karnataka hills</li>
+<li><strong>Hydro Belt:</strong> Himachal Pradesh, Uttarakhand, J&K, Sikkim, Arunachal (Himalayan rivers)</li>
+</ul>
+</div>
+
+<!-- CHAPTER 9 -->
+<div class="chapter">
+<h2><span class="chapter-num">9</span> Risk Analysis (ISO 31000 Framework)</h2>
+<p>Power sector assets face significant risks from natural disasters, equipment failure, and operational hazards. This chapter provides a comprehensive risk assessment using the ISO 31000 framework.</p>
+
+<h3>9.1 Act of God (AOG) Risks</h3>
+<table>
+<tr><th>Risk</th><th>Probability</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments</th><th>Mitigation</th></tr>
+<tr><td>Cyclone/Storm</td><td>Medium</td><td>Very High</td><td>50–200</td><td>Wind, Solar</td><td>Cyclone-rated design, stow protocols</td></tr>
+<tr><td>Flood</td><td>Medium</td><td>High</td><td>20–100</td><td>Coal, Solar</td><td>Elevated foundations, drainage</td></tr>
+<tr><td>Earthquake</td><td>Low</td><td>Very High</td><td>30–150</td><td>All</td><td>Seismic design (Zone IV/V)</td></tr>
+<tr><td>Lightning</td><td>High</td><td>Medium</td><td>5–30</td><td>Wind, Solar</td><td>IEC 62305 LPS, surge protection</td></tr>
+<tr><td>Hailstorm</td><td>Medium</td><td>High</td><td>10–50</td><td>Solar</td><td>Glass-glass modules, tilt-to-stow</td></tr>
+</table>
+
+<h3>9.2 Non-AOG (Operational) Risks</h3>
+<table>
+<tr><th>Risk</th><th>Probability</th><th>Impact</th><th>EMV (₹ Cr)</th><th>Segments</th><th>Mitigation</th></tr>
+<tr><td>Boiler Tube Failure</td><td>High</td><td>High</td><td>20–80</td><td>Coal</td><td>NDT, water chemistry, AI prediction</td></tr>
+<tr><td>Turbine Blade Failure</td><td>Medium</td><td>High</td><td>20–80</td><td>Wind</td><td>CMS, drone inspections</td></tr>
+<tr><td>Transformer Failure</td><td>Medium</td><td>High</td><td>15–60</td><td>All</td><td>DGA oil analysis, online monitoring</td></tr>
+<tr><td>Fire (Electrical/Coal)</td><td>Medium</td><td>High</td><td>10–100</td><td>Coal, Solar</td><td>Detection + suppression systems</td></tr>
+<tr><td>Panel Hotspot/PID</td><td>High</td><td>Medium</td><td>5–20</td><td>Solar</td><td>Drone thermal imaging, IV testing</td></tr>
+<tr><td>Gearbox Failure</td><td>Medium</td><td>High</td><td>15–50</td><td>Wind</td><td>Oil analysis, vibration trending</td></tr>
+</table>
+
+<h3>9.3 Case Studies — Claims Learnings</h3>
+<table>
+<tr><th>Incident</th><th>Year</th><th>Loss (₹ Cr)</th><th>Key Learning</th></tr>
+<tr><td>Cyclone Tauktae — Gujarat Wind</td><td>2021</td><td>180</td><td>Cyclone-rated towers essential for coast</td></tr>
+<tr><td>Ramagundam Boiler Explosion</td><td>2022</td><td>95</td><td>NDT frequency must increase after 15 yrs</td></tr>
+<tr><td>Rajasthan Solar Hailstorm</td><td>2023</td><td>45</td><td>Glass-glass panels survive; backsheet doesn't</td></tr>
+<tr><td>Tamil Nadu Wind Lightning</td><td>2022</td><td>28</td><td>LPS upgrade ROI = 3 years</td></tr>
+<tr><td>Mundra Coal Handling Fire</td><td>2020</td><td>120</td><td>Coal dust suppression is non-negotiable</td></tr>
+</table>
+
+<h3>9.4 Best Practices by Segment</h3>
+<p><strong>Coal:</strong> Predictive maintenance (AI/ML), NDT every 2 years after 15-year mark, coal quality analyzers, boiler water chemistry control, fire suppression barriers.</p>
+<p><strong>Wind:</strong> Condition Monitoring Systems (CMS), IEC 62305 Lightning Protection, blade inspection (drone/rope), structural health monitoring, cyclone stow protocols.</p>
+<p><strong>Solar:</strong> Quarterly drone thermal imaging, string-level IV curve testing, tracker actuator maintenance, hail-resistant module procurement, inverter N+1 redundancy.</p>
+</div>
+
+<!-- CHAPTER 10 -->
+<div class="chapter">
+<h2><span class="chapter-num">10</span> Emerging Technologies</h2>
+<p>New technologies are reshaping India's power landscape, creating both opportunities and new risk profiles for insurers.</p>
+
+<table>
+<tr><th>Technology</th><th>Status</th><th>Capacity/Target</th><th>Risk Profile</th></tr>
+<tr><td>Battery Storage (BESS)</td><td>Early deployment</td><td>5 GW by 2027</td><td>Thermal runaway, fire, degradation</td></tr>
+<tr><td>Green Hydrogen</td><td>Pilot stage</td><td>5 MMT by 2030</td><td>Explosion, electrolyzer failure</td></tr>
+<tr><td>Offshore Wind</td><td>Tenders issued</td><td>4 GW by 2030</td><td>Marine corrosion, cable damage</td></tr>
+<tr><td>Floating Solar</td><td>1.2 GW operational</td><td>10 GW by 2030</td><td>Anchor failure, water ingress</td></tr>
+<tr><td>Carbon Capture (CCS)</td><td>R&D / demo</td><td>Pilot plants</td><td>Chemical handling, pressure vessels</td></tr>
+<tr><td>Pumped Hydro Storage</td><td>Under construction</td><td>27 GW planned</td><td>Geological risks, dam safety</td></tr>
+<tr><td>Small Modular Reactors</td><td>Policy stage</td><td>TBD</td><td>Nuclear risks at smaller scale</td></tr>
+</table>
+
+<div class="insight">
+<strong>💡 Insurance Implication:</strong> These technologies have limited or no loss history — making traditional actuarial pricing impossible. First-mover insurers who develop expertise in BESS, offshore wind, and H2 will capture a greenfield premium pool.
+</div>
+</div>
+
+<!-- CHAPTER 11 -->
+<div class="chapter">
+<h2><span class="chapter-num">11</span> Insurance Market Opportunity</h2>
+<p>India's power sector insurance market is estimated at <strong>₹8,000–10,000 Cr annual premium</strong> and growing 15–20% annually driven by 50+ GW capacity additions per year.</p>
+
+<h3>Insurance Products for Power Sector</h3>
+<table>
+<tr><th>Product</th><th>Covers</th><th>Typical Premium Range</th><th>Growth Outlook</th></tr>
+<tr><td>CAR/EAR</td><td>Construction-phase damage</td><td>0.15–0.30% of project cost</td><td>High (50 GW/yr additions)</td></tr>
+<tr><td>Material Damage (MD)</td><td>Operational asset damage</td><td>0.05–0.15% of asset value</td><td>Steady</td></tr>
+<tr><td>MLOP / BI</td><td>Revenue loss during repair</td><td>0.10–0.25% of annual revenue</td><td>High (often exceeds MD)</td></tr>
+<tr><td>BESS Fire Cover</td><td>Battery thermal runaway</td><td>Being developed</td><td>Very High (new market)</td></tr>
+<tr><td>Marine (Offshore Wind)</td><td>Subsea cables, installation</td><td>Specialist pricing</td><td>New opportunity</td></tr>
+<tr><td>Parametric Weather</td><td>Wind/solar shortfall triggers</td><td>Innovative product</td><td>Growing</td></tr>
+</table>
+
+<h3>Key Insurance Insights</h3>
+<ul style="margin:10px 0 15px 20px;">
+<li>Business Interruption claims often <strong>2-3x larger</strong> than Material Damage claims</li>
+<li>Wind turbine crane availability in India: 3-6 months wait — extends BI significantly</li>
+<li>Solar hailstorm emerged as #1 peril post-2020 (can damage 80% of modules in minutes)</li>
+<li>Coal plant boiler failures have longest lead time: 12-18 months for turbine rotor replacement</li>
+<li>Pre-agreed repair protocols in policy wording reduce claims settlement time by 60%</li>
+</ul>
+
+<div class="insight">
+<strong>💡 The Opportunity:</strong> With India adding ₹5-6 lakh crore of power assets annually (2025–2030), the construction + operational insurance premium pool will double within 5 years. Specialized underwriting for BESS, offshore wind, and green H2 represents a first-mover advantage.
+</div>
+</div>
+
+<!-- CHAPTER 12 -->
+<div class="chapter">
+<h2><span class="chapter-num">12</span> Data Sources & References</h2>
+<table>
+<tr><th>Source</th><th>Data Used</th><th>URL</th></tr>
+<tr><td>Central Electricity Authority</td><td>Capacity, generation, PLF/CUF</td><td>cea.nic.in</td></tr>
+<tr><td>MNRE</td><td>RE capacity, physical progress</td><td>mnre.gov.in</td></tr>
+<tr><td>Ministry of Power</td><td>Policy, projections, demand</td><td>powermin.gov.in</td></tr>
+<tr><td>National Power Portal</td><td>Real-time data, state-wise</td><td>npp.gov.in</td></tr>
+<tr><td>Company Annual Reports</td><td>Market players, financial data</td><td>BSE/NSE filings</td></tr>
+<tr><td>ISO 31000:2018</td><td>Risk management framework</td><td>International standard</td></tr>
+<tr><td>IEC 62305</td><td>Lightning protection standard</td><td>International standard</td></tr>
+</table>
+
+<div style="margin-top:20px; padding:15px; background:#f0f4f8; border-radius:8px;">
+<p style="font-size:12px; color:#555;">
+<strong>Disclaimer:</strong> Base data is as of March 2025 (FY24-25). Updated figures from MNRE June 2026 mentioned where applicable. Company data from latest available annual reports. Risk analysis case studies based on publicly reported incidents. This eBook is for internal reference and educational purposes only.
+</p>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+<p style="font-size:13px; font-weight:700; color:#333;">⚡ India Power Sector — Complete Intelligence eBook</p>
+<p>ICICI Lombard General Insurance Company Ltd.</p>
+<p>Designed by Deepak Arora | Data: CEA, MNRE, Ministry of Power | FY 2024-25</p>
+</div>
+
+</div><!-- end .ebook -->
+</body>
+</html>

@@ -12,6 +12,13 @@ export function DownloadsSection() {
 
   const downloads = [
     {
+      category: '📚 Power Sector eBook',
+      items: [
+        { id: 'ebook-view', title: 'Read eBook Online', subtitle: 'Full 12-chapter guide — Industry, Generation, Ownership, Risks, Market Players', url: '/ebook/india-power-sector-ebook.html', filename: 'India_Power_Sector_eBook', icon: '📚', color: '#005B75', format: 'pdf' },
+        { id: 'ebook-html', title: 'Download eBook (HTML)', subtitle: 'Save offline — all chapters with formatting', url: '/ebook/india-power-sector-ebook.html', filename: 'India_Power_Sector_eBook.html', icon: '💾', color: '#005B75', format: 'html' },
+      ],
+    },
+    {
       category: '📋 Power PDF — Complete Dashboard Report',
       items: [
         { id: 'power-pdf', title: 'Power PDF', subtitle: 'All sections: Industry Overview, Generation, Ownership, Timeline, Risk, Market Players', url: '/journals/power-sector-pdf.html', filename: 'India_Power_Sector_Complete_Report', icon: '📋', color: '#B02A30', format: 'pdf' },
