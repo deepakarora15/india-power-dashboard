@@ -96,7 +96,7 @@ export function ThermalPlayersSection() {
     if (filter === 'gas-led') return c.gasMW > 1000;
     if (filter === 'psu') return c.ownership !== 'private';
     return true;
-  });
+  }).sort((a, b) => b.totalThermalMW - a.totalThermalMW);
 
   const getOwnershipColor = (o: string) => {
     if (o === 'central_psu') return '#1565C0';
