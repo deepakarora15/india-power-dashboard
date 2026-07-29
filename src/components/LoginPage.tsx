@@ -33,7 +33,7 @@ export function LoginPage() {
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             {/* ICICI Lombard Logo */}
             <div className="text-center mb-6">
-              <img src="/icici-logo.svg" alt="ICICI Lombard" className="h-16 mx-auto mb-4 rounded-xl shadow-lg" />
+              <img src="/icici-logo.jpg" alt="ICICI Lombard" className="h-16 mx-auto mb-4 rounded-lg shadow-lg" />
               <h1 className="text-lg font-black text-gray-900">India Power Sector Dashboard</h1>
               <p className="text-xs text-gray-500 mt-1">Power & Energy Practice</p>
             </div>

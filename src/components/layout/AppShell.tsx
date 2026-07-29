@@ -39,7 +39,7 @@ export function AppShell({ children }: AppShellProps) {
           <div className="flex items-center gap-4">
             {/* ICICI Lombard Logo */}
             <div className="hidden tablet:flex items-center">
-              <img src="/icici-logo.svg" alt="ICICI Lombard" className="h-10 rounded-lg" />
+              <img src="/icici-logo.jpg" alt="ICICI Lombard" className="h-10 rounded" />
             </div>
             <div className="hidden tablet:block">
               <h1 className="text-lg font-bold text-white leading-tight">
