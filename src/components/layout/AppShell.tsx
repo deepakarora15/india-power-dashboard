@@ -39,9 +39,13 @@ export function AppShell({ children }: AppShellProps) {
           <div className="flex items-center gap-4">
             {/* ICICI Lombard Logo */}
             <div className="hidden tablet:flex items-center gap-2">
-              <div className="bg-gradient-to-r from-[#E85D04] to-[#F99D27] rounded-lg px-3 py-1.5">
-                <span className="text-white font-black text-sm" style={{ fontStyle: 'italic' }}>i</span>
-                <span className="text-white font-black text-sm">CICI Lombard</span>
+              <div className="bg-gradient-to-r from-[#D94F00] to-[#F47B20] rounded-lg px-4 py-2 flex items-center gap-1 shadow-md">
+                <span className="text-white text-xl font-black italic leading-none" style={{ fontFamily: 'serif' }}>i</span>
+                <span className="text-white text-base font-black tracking-tight">CICI</span>
+                <span className="text-white text-base font-black ml-0.5 flex items-center">
+                  <span className="inline-block w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-black mr-0.5">G</span>
+                  Lombard
+                </span>
               </div>
             </div>
             <div className="hidden tablet:block">
