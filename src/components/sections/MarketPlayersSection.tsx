@@ -10,7 +10,7 @@ export function MarketPlayersSection() {
   const { sectorView } = useSectorFilter();
   const [selectedCompany, setSelectedCompany] = useState<MarketPlayer | null>(null);
   const [filterType, setFilterType] = useState<string>('all');
-  const [activeTab, setActiveTab] = useState<'non-fossil' | 'fossil'>(sectorView === 'fossil' ? 'fossil' : 'non-fossil');
+  const [activeTab, setActiveTab] = useState<'non-fossil' | 'fossil'>('non-fossil');
 
   if (isLoading) {
     return <div className="animate-pulse h-96 bg-gray-200 rounded-xl" />;
@@ -53,7 +53,10 @@ export function MarketPlayersSection() {
         if (filterType === 'psu') return c.ownership === 'central_psu';
         return true;
       })
-  ).sort((a, b) => b.totalRECapacityMW - a.totalRECapacityMW);
+  ).sort((a, b) => {
+    if (filterType === 'hydro') return (b.hydroMW || 0) - (a.hydroMW || 0);
+    return b.totalRECapacityMW - a.totalRECapacityMW;
+  });
 
   return (
     <div className="space-y-5">
