@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { useMarketPlayers, MarketPlayer } from '@/hooks/useMarketPlayers';
-import { useSectorFilter } from '@/hooks/useSectorFilter';
 import { formatMW } from '@/utils/formatting';
 import { getSourceColor } from '@/utils/colors';
 import { ThermalPlayersSection } from '@/components/sections/ThermalPlayersSection';
 
 export function MarketPlayersSection() {
   const { data, isLoading } = useMarketPlayers();
-  const { sectorView } = useSectorFilter();
   const [selectedCompany, setSelectedCompany] = useState<MarketPlayer | null>(null);
   const [filterType, setFilterType] = useState<string>('all');
   const [activeTab, setActiveTab] = useState<'non-fossil' | 'fossil'>('non-fossil');
