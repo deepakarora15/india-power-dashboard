@@ -38,7 +38,7 @@ const DEFAULT_ACCOUNTS: UserAccount[] = [
   { username: 'admin', password: 'admin123', email: 'admin@icicilombard.com', role: 'admin', createdAt: '2025-01-01' },
   { username: 'user', password: 'user123', email: 'user@icicilombard.com', role: 'user', createdAt: '2025-01-01' },
   { username: 'DeepakArora', password: 'deepak123', email: 'deepakarora@icicilombard.com', role: 'admin', createdAt: '2025-01-01' },
-  { username: 'CSG2', password: 'csg123', email: 'csg2@icicilombard.com', role: 'admin', createdAt: '2025-01-01' },
+  { username: 'CSG2', password: 'csg123', email: 'csg2@icicilombard.com', role: 'user', createdAt: '2025-01-01' },
 ];
 
 // Get all user accounts (default + admin-created)
