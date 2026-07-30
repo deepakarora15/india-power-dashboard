@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useAuthStore, getAllUsers } from '@/store/authStore';
+import { useAuthStore } from '@/store/authStore';
 
 export function LoginPage() {
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const login = useAuthStore((s) => s.login);
 
@@ -13,21 +14,18 @@ export function LoginPage() {
       setError('Please enter your username.');
       return;
     }
-    const allUsers = getAllUsers();
-    const user = allUsers.find(u => u.username.toLowerCase() === username.trim().toLowerCase());
-    if (!user) {
-      setError('User not found. Contact admin to create your account.');
+    if (!password.trim()) {
+      setError('Please enter your password.');
       return;
     }
-    const success = login(user.username, user.password);
+    const success = login(username.trim(), password.trim());
     if (!success) {
-      setError('Login failed. Please try again.');
+      setError('Invalid username or password.');
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col font-mulish" style={{ background: 'linear-gradient(135deg, #B02A30 0%, #8B1A1F 40%, #003D50 70%, #005B75 100%)' }}>
-      {/* Main content - centered */}
       <div className="flex-1 flex items-center justify-center px-4">
         <div className="w-full max-w-md">
           <div className="bg-white rounded-2xl shadow-2xl p-8">
@@ -47,8 +45,18 @@ export function LoginPage() {
                   value={username}
                   onChange={(e) => { setUsername(e.target.value); setError(''); }}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-icici-maroon focus:border-transparent"
-                  placeholder="Enter your username"
+                  placeholder="Enter username"
                   autoFocus
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-gray-600 uppercase block mb-1.5">Password</label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => { setPassword(e.target.value); setError(''); }}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-icici-maroon focus:border-transparent"
+                  placeholder="Enter password"
                 />
               </div>
 
@@ -67,9 +75,9 @@ export function LoginPage() {
             </form>
           </div>
 
-          {/* Disclaimer below login card */}
+          {/* Disclaimer */}
           <div className="mt-5 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-            <p className="text-[11px] text-white/90 font-semibold text-center mb-2">⚠️ Internal & Confidentiality Notice</p>
+            <p className="text-[11px] text-white/90 font-semibold text-center mb-2">Internal & Confidentiality Notice</p>
             <p className="text-[10px] text-white/70 text-center leading-relaxed">
               This portal and its contents are intended solely for internal use by authorized personnel. The information provided herein is compiled from third-party and public external sources for informational and analytical purposes only. While reasonable efforts are made to ensure accuracy, ICICI Lombard makes no representations or warranties regarding the completeness, reliability, or accuracy of the data.
             </p>
