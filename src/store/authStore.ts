@@ -110,7 +110,7 @@ export const useAuthStore = create<AuthStore>()(
 
       login: (username: string, password: string) => {
         const allUsers = getAllUsers();
-        const user = allUsers.find(u => u.username === username && u.password === password);
+        const user = allUsers.find(u => u.username.toLowerCase() === username.toLowerCase() && u.password === password);
         if (!user) return false;
 
         set({ isLoggedIn: true, role: user.role, username: user.username, email: user.email });
